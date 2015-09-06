@@ -1,0 +1,36 @@
+2015/09/07 01:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/index".' in /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#1 /home/wwwroot/lvzhizhu/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/wwwroot/lvzhizhu/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://www.lijie.com/index.php?r=site/page&view=about
+---
+2015/09/07 01:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/index".' in /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#1 /home/wwwroot/lvzhizhu/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/wwwroot/lvzhizhu/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://www.lijie.com/index.php?r=site/page&view=about
+---
+2015/09/07 01:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/index".' in /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#1 /home/wwwroot/lvzhizhu/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/wwwroot/lvzhizhu/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://www.lijie.com/index.php?r=site/page&view=about
+---
+2015/09/07 01:09:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/index".' in /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/lvzhizhu/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#1 /home/wwwroot/lvzhizhu/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/wwwroot/lvzhizhu/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://www.lijie.com/index.php?r=site/page&view=about
+---
