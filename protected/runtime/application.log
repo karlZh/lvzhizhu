@@ -34,3 +34,48 @@ Stack trace:
 REQUEST_URI=/index.php?r=site/index
 HTTP_REFERER=http://www.lijie.com/index.php?r=site/page&view=about
 ---
+2015/09/16 11:39:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/wwwroot/shop/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/shop/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /home/wwwroot/shop/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/wwwroot/shop/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2015/09/16 11:39:34 [error] [php] scandir() has been disabled for security reasons (/home/wwwroot/shop/framework/gii/GiiModule.php:216)
+Stack trace:
+#0 /home/wwwroot/shop/framework/base/CModule.php(90): GiiModule->init()
+#1 /home/wwwroot/shop/framework/YiiBase.php(206): GiiModule->__construct()
+#2 /home/wwwroot/shop/framework/base/CModule.php(282): createComponent()
+#3 /home/wwwroot/shop/framework/web/CWebApplication.php(337): CWebApplication->getModule()
+#4 /home/wwwroot/shop/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#5 /home/wwwroot/shop/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/wwwroot/shop/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /home/wwwroot/shop/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=gii
+in /home/wwwroot/shop/index.php (13)
+2015/09/16 11:41:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/wwwroot/shop/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/wwwroot/shop/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/wwwroot/shop/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/wwwroot/shop/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/wwwroot/shop/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/wwwroot/shop/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2015/09/16 11:54:35 [error] [exception.CException] exception 'CException' with message 'IndexController cannot find the requested view "index".' in /home/wwwroot/shop/framework/web/CController.php:878
+Stack trace:
+#0 /home/wwwroot/shop/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /home/wwwroot/shop/protected/controllers/IndexController.php(4): CController->render('index')
+#2 /home/wwwroot/shop/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#3 /home/wwwroot/shop/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/wwwroot/shop/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/wwwroot/shop/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/wwwroot/shop/framework/web/CWebApplication.php(282): CController->run('index')
+#7 /home/wwwroot/shop/framework/web/CWebApplication.php(141): CWebApplication->runController('index/index')
+#8 /home/wwwroot/shop/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /home/wwwroot/shop/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=index/index
+---
