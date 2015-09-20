@@ -79,3 +79,249 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/index.php?r=index/index
 ---
+2015/09/20 16:31:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php
+HTTP_REFERER=http://localhost/shop/
+---
+2015/09/20 22:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Brand/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:16:58 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:07 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:08 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:08 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:08 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:08 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:09 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:09 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:09 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:09 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:09 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:18:24 [error] [exception.CException] exception 'CException' with message 'BrandController cannot find the requested view "brands".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('brands', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\BrandController.php(20): CController->render('brands')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('Brand/index')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=Brand/index
+HTTP_REFERER=http://localhost/shop/index.php?r=Category/index
+---
+2015/09/20 22:24:38 [error] [exception.CException] exception 'CException' with message 'ProductController cannot find the requested view "products".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('products', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\ProductController.php(20): CController->render('products')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('productlist')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=product/productlist
+---
+2015/09/20 22:25:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "productlist".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('productlist')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('productlist')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=product/productlist
+---
+2015/09/20 22:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "picdetail".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('picdetail')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('picdetail')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('product/picdeta...')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=product/picdetail
+HTTP_REFERER=http://localhost/shop/index.php?r=product/detail
+---
