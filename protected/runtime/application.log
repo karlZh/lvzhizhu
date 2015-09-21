@@ -325,3 +325,131 @@ Stack trace:
 REQUEST_URI=/shop/index.php?r=product/picdetail
 HTTP_REFERER=http://localhost/shop/index.php?r=product/detail
 ---
+2015/09/21 21:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin
+---
+2015/09/21 21:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin
+---
+2015/09/21 21:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:51:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:51:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:51:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:51:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
+2015/09/21 21:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default/index".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/index.php?r=admin/default/index
+---
