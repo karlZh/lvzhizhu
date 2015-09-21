@@ -6,7 +6,7 @@
  * Time: 22:54
  */
 
-class MemberController extends CController{
+class MemberController extends Controller{
 
     /*
      * actionIndex

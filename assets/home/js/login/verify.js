@@ -1,4 +1,4 @@
-//拍鞋网登录注册相关验证  
+//登录注册相关验证
 var PXVerify = {
 	_trim:function(str){
 		return $.trim(str);

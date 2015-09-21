@@ -6,7 +6,7 @@
  * Time: 22:22
  */
 
-class ProductController extends CController{
+class ProductController extends Controller{
 
     /*
      * actionList

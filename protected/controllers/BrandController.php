@@ -6,7 +6,7 @@
  * Time: 22:15
  */
 
-class BrandController extends CController{
+class BrandController extends Controller{
 
     /*
      * actionIndex

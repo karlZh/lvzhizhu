@@ -6,7 +6,7 @@
  * Time: 16:54
  */
 
-class CategoryController extends CController{
+class CategoryController extends Controller{
 
     /*
      * actionIndex

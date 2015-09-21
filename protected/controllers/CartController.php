@@ -6,7 +6,7 @@
  * Time: 22:46
  */
 
-class CartController extends CController{
+class CartController extends Controller{
 
     /*
      * actionIndex

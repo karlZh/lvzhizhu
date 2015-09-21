@@ -6,7 +6,7 @@
      * @time 10:30
      * @since v1.0
      */
-	class IndexController extends CController{
+	class IndexController extends Controller{
 
         /*
          * actionIndex
