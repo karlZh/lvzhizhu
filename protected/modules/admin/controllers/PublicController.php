@@ -16,6 +16,13 @@ class PublicController extends Controller{
      * @since v1.0
      */
     public function actionLogin(){
-        $this->render('login');
+        $model = Admin::model();
+        if(!empty($_POST['Admin'])){
+            $model->attributes = $_POST['Admin'];
+            if($model->validate()){
+                $this->redirect($this->createUrl('default/index'));
+            }
+        }
+        $this->render('login',array('model'=>$model));
     }
 } 
