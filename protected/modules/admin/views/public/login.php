@@ -27,6 +27,14 @@
     <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/html5shiv.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/respond.min.js"></script>
     <![endif]-->
+    <style>
+        section.errmessage .errorMessage{
+            color:yellow;
+            text-align: left;
+            line-height: 25px;
+            margin-bottom:10px;
+        }
+    </style>
 </head>
 <body class="bg-3">
 
@@ -47,11 +55,17 @@
                 array(
                     'htmlOptions'=>array(
                         'id'=>"form-signin",
-                        'class'=>"form-signin"
+                        'class'=>"form-signin",
                     ),
                 )
             )
         ?>
+        <section class="errmessage">
+        <?php
+            echo $form->error($model,"adminuser");
+            echo $form->error($model,"adminpass");
+        ?>
+        </section>
         <section>
             <div class="input-group">
                 <?php
@@ -60,7 +74,7 @@
                        'adminuser',
                        array(
                            "class"=>"form-control",
-                           "placeholder"=>"管理员账号"
+                           "placeholder"=>"管理员账号",
                        )
                    );
                 ?>
@@ -72,10 +86,10 @@
                 <?php
                 echo $form->passwordField(
                     $model,
-                    'adminuser',
+                    'adminpass',
                     array(
                         "class"=>"form-control",
-                        "placeholder"=>"管理员账号"
+                        "placeholder"=>"管理员密码"
                     )
                 );
                 ?>
