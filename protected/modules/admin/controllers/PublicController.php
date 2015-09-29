@@ -19,6 +19,7 @@ class PublicController extends Controller{
     public function actionLogin(){
         $model = Admin::model();
         if(!empty($_POST['Admin'])){
+            $model->scenario = 'adminlogin';
             $model->attributes = $_POST['Admin'];
             if($model->validate()){
                 $this->redirect($this->createUrl('default/index'));

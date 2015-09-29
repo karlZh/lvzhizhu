@@ -11,15 +11,15 @@
 
 <!-- page header -->
 <div class="pageheader">
-    <h2><i class="fa fa-user" style="line-height: 48px;padding-left: 1px;"></i> 管理员管理 <span> 管理员列表</span></h2>
+    <h2><i class="fa fa-user" style="line-height: 48px;padding-left: 1px;"></i> 品牌管理 <span> 品牌列表</span></h2>
 
 
     <div class="breadcrumbs">
         <ol class="breadcrumb">
             <li>您在这里</li>
             <li><a href="<?php echo $this->createUrl('default/index') ?>">后台首页</a></li>
-            <li><a href="<?php echo $this->createUrl('admin/index') ?>">管理员管理</a></li>
-            <li class="active">管理员列表</li>
+            <li><a href="<?php echo $this->createUrl('brand/index') ?>">品牌管理</a></li>
+            <li class="active">品牌列表</li>
         </ol>
     </div>
 
@@ -36,7 +36,7 @@
 
     <!-- tile header -->
     <div class="tile-header">
-        <h1>管理员列表</h1>
+        <h1>品牌列表</h1>
         <!--<div class="search">
             <input type="text" placeholder="Search...">
         </div>-->
@@ -94,18 +94,12 @@
                         <label for="allchck"></label>
                     </div>
                 </th>
-                <th class="sortable sort-alpha">用户名</th>
-                <th class="sortable sort-alpha">真实姓名</th>
-                <th class="sortable sort-alpha">联系电话</th>
-                <th class="sortable sort-alpha">联系邮箱</th>
-                <th class="sortable sort-alpha">最后登录时间</th>
-                <th class="sortable sort-alpha">最后登录IP</th>
-                <th>状态</th>
+                <th class="sortable sort-alpha">品牌分类名称</th>
                 <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            <?php foreach($adminusers as $user): ?>
+            <?php foreach($brands as $brand): ?>
                 <tr>
                     <td>
                         <div class="checkbox check-transparent">
@@ -113,14 +107,8 @@
                             <label for="chck01"></label>
                         </div>
                     </td>
-                    <td><?php echo $user->adminuser ?></td>
-                    <td><?php echo $user->admintname ?></td>
-                    <td><?php echo $user->admintel ?></td>
-                    <td><?php echo $user->adminemail ?></td>
-                    <td><?php echo date("Y-m-d H:i:s",$user->logintime) ?></td>
-                    <td><?php echo long2ip($user->loginip) ?></td>
-                    <td><a href="#" class="check-toggler <?php if(!$user->isforbidden){echo "checked";} ?>" id="id-<?php echo $user->id ?>"></a></td>
-                    <td><a href="#">编辑</a> / <a href="<?php echo $this->createUrl('admin/del',array('id'=>$user->id)) ?>">删除</a></td>
+                    <td><?php echo $brand->name ?></td>
+                    <td><a href="<?php echo $this->createUrl('brand/del',array('id'=>$brand->id)) ?>">删除</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

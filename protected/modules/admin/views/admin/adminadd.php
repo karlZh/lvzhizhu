@@ -215,9 +215,45 @@
             <?php echo $form->error($model,'adminemail') ?>
         </span>
     </div>
+
 </div>
 
+<div class="form-group">
+    <?php echo $form->labelEx(
+        $model,
+        'isforbidden',
+        array(
+            "for"=>"input06",
+            "class"=>"col-sm-2 control-label"
+        )
+    ); ?>
+    <div class="col-sm-10">
+        <div class="onoffswitch greensea">
+            <?php echo $form->checkbox(
+                $model,
+                'isforbidden',
+                array(
+                    "class"=>"onoffswitch-checkbox",
+                    "id"=>"switch-on1",
+                    "checked"=>"",
+                )
+            ); ?>
+            <label class="onoffswitch-label" for="switch-on1">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
 
+    </div>
+
+</div>
+    <?php
+        if(Yii::app()->user->hasFlash('info')):
+    ?>
+        <p class="text-right"><?php echo Yii::app()->user->getFlash('info') ?></p>
+    <?php
+        endif;
+    ?>
 <div class="form-group form-footer">
     <div class="col-sm-offset-2 col-sm-12">
         <button type="submit" class="btn btn-primary">添加</button>
@@ -229,26 +265,18 @@
 </div>
 <!-- /tile body -->
 
-
-
-
                 </section>
                 <!-- /tile -->
 
 
-
-
             </div>
             <!-- /col 6 -->
-
 
         </div>
         <!-- /row -->
 
     </div>
     <!-- /content container -->
-
-
 
 
 

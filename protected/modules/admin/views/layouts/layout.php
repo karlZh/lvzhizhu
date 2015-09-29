@@ -38,10 +38,10 @@
         <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/html5shiv.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/respond.min.js"></script>
         <![endif]-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/jquery.js"></script>
     </head>
 <body class="bg-3">
-
-
 
     <!-- Preloader -->
     <div class="mask"><div id="loader"></div></div>
@@ -421,24 +421,30 @@
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-pencil"></i> Interface <b class="fa fa-plus dropdown-plus"></b>
+                                <i class="fa fa-pencil"></i> 品牌管理 <b class="fa fa-plus dropdown-plus"></b>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="ui-elements.html">
-                                        <i class="fa fa-caret-right"></i> UI Elements
+                                    <a href="<?php echo $this->createUrl('brandcate/add') ?>">
+                                        <i class="fa fa-caret-right"></i> 添加品牌分类
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="typography.html">
-                                        <i class="fa fa-caret-right"></i> Typography
+                                    <a href="<?php echo $this->createUrl('brandcate/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 品牌分类列表
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tiles.html">
-                                        <i class="fa fa-caret-right"></i> Tiles
+                                    <a href="<?php echo $this->createUrl('brand/add') ?>">
+                                        <i class="fa fa-caret-right"></i> 添加品牌
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('brand/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 品牌列表
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
 
@@ -1025,15 +1031,8 @@
         </div>
 
 
-
-
-
-
     </div>
     <!-- Make page fluid-->
-
-
-
 
 </div>
     <!-- Wrap all page content end -->
@@ -1044,8 +1043,6 @@
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/vendor/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>

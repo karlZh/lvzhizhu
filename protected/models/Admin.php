@@ -19,15 +19,15 @@ class Admin extends CActiveRecord{
 
     public function rules(){
         return array(
-            array('adminuser','required','message'=>'管理员账户不能为空'),
-            array('adminuser','unique','message'=>'管理员账户已经注册'),
-            array('adminpass','required','message'=>'管理员密码不能为空'),
-            array('repass','required','message'=>'重复密码不能为空'),
-            array('repass','compare','compareAttribute'=>'adminpass','message'=>'两次密码输入不一致'),
-            array('adminpass','checkPass'),
-            array('admintel','safe'),
-            array('adminemail','email','message'=>'电子邮箱格式不正确'),
-            array('admintname','safe'),
+            array('adminuser','required','message'=>'管理员账户不能为空','on'=>'adminlogin,adminadd'),
+            array('adminuser','unique','message'=>'管理员账户已经注册','on'=>'adminadd'),
+            array('adminpass','required','message'=>'管理员密码不能为空','on'=>'adminlogin,adminadd'),
+            array('repass','required','message'=>'重复密码不能为空','on'=>'adminadd'),
+            array('repass','compare','compareAttribute'=>'adminpass','message'=>'两次密码输入不一致','on'=>'adminadd'),
+            array('adminpass','checkPass','on'=>'adminlogin'),
+            array('admintel','safe','on'=>'adminadd'),
+            array('adminemail','email','message'=>'电子邮箱格式不正确','on'=>'adminadd'),
+            array('admintname,isforbidden','safe','on'=>'adminadd'),
         );
     }
 
@@ -39,6 +39,7 @@ class Admin extends CActiveRecord{
             'admintname'=>'管理员姓名',
             'admintel'=>'管理员电话',
             'adminemail'=>'管理员邮箱',
+            'isforbidden'=>'禁用管理员',
         );
     }
 
