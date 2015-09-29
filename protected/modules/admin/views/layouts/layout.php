@@ -448,6 +448,64 @@
                             </ul>
                         </li>
 
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-th"></i> 商品属性管理 <b class="fa fa-plus dropdown-plus"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo $this->createUrl('propertycate/add') ?>">
+                                        <i class="fa fa-caret-right"></i> 添加商品属性分类
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('propertycate/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 商品属性分类列表
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('property/add') ?>">
+                                        <i class="fa fa-caret-right"></i> 添加商品属性
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('property/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 商品属性列表
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-tint"></i> 商品管理 <b class="fa fa-plus dropdown-plus"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo $this->createUrl('cate/add') ?>">
+                                        <i class="fa fa-caret-right"></i> 添加商品分类
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('cate/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 商品分类列表
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('product/add') ?>">
+                                        <i class="fa fa-caret-right"></i> 添加商品
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('product/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 商品列表
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
                         <li>
                             <a href="buttons.html">
                                 <i class="fa fa-tint"></i> Buttons & Icons

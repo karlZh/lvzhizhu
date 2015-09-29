@@ -61,7 +61,7 @@ class Admin extends CActiveRecord{
                     $data->id,
                     array(
                         'logintime'=>time(),
-                        'loginip'=>ip2long($_SERVER['REMOTE_ADDR']),
+                        'loginip'=>(int)ip2long($_SERVER['REMOTE_ADDR']),
                     )
                 );
                 $_SESSION['admin']['adminid'] = $data->id;
