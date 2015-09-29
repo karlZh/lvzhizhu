@@ -70,5 +70,5 @@ class BrandController extends Controller{
         }
         $this->redirect(array('brand/index'));
     }
-    
+
 }

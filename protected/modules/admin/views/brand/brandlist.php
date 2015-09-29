@@ -94,7 +94,7 @@
                         <label for="allchck"></label>
                     </div>
                 </th>
-                <th class="sortable sort-alpha">品牌分类名称</th>
+                <th class="sortable sort-alpha">品牌名称</th>
                 <th>操作</th>
             </tr>
             </thead>
