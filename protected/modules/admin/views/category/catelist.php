@@ -11,15 +11,15 @@
 
 <!-- page header -->
 <div class="pageheader">
-    <h2><i class="fa fa-user" style="line-height: 48px;padding-left: 1px;"></i> 品牌分类管理 <span> 品牌分类列表</span></h2>
+    <h2><i class="fa fa-user" style="line-height: 48px;padding-left: 1px;"></i> 商品分类管理 <span> 商品分类列表</span></h2>
 
 
     <div class="breadcrumbs">
         <ol class="breadcrumb">
             <li>您在这里</li>
             <li><a href="<?php echo $this->createUrl('default/index') ?>">后台首页</a></li>
-            <li><a href="<?php echo $this->createUrl('brandcate/index') ?>">品牌分类管理</a></li>
-            <li class="active">品牌分类列表</li>
+            <li><a href="<?php echo $this->createUrl('category/index') ?>">商品分类管理</a></li>
+            <li class="active">商品分类列表</li>
         </ol>
     </div>
 
@@ -36,7 +36,7 @@
 
     <!-- tile header -->
     <div class="tile-header">
-        <h1>品牌分类列表</h1>
+        <h1>商品分类列表</h1>
         <!--<div class="search">
             <input type="text" placeholder="Search...">
         </div>-->
@@ -94,7 +94,7 @@
                         <label for="allchck"></label>
                     </div>
                 </th>
-                <th class="sortable sort-alpha">品牌分类名称</th>
+                <th class="sortable sort-alpha">商品分类名称</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -108,7 +108,7 @@
                         </div>
                     </td>
                     <td><?php echo $cate->name ?></td>
-                    <td><a href="<?php echo $this->createUrl('brandcate/mod',array('id'=>$cate->id)) ?>">编辑</a> / <a href="<?php echo $this->createUrl('brandcate/del',array('id'=>$cate->id)) ?>">删除</a></td>
+                    <td><a href="<?php echo $this->createUrl('category/mod',array('id'=>$cate->id)) ?>">编辑</a> / <a href="<?php echo $this->createUrl('category/del',array('id'=>$cate->id)) ?>">删除</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

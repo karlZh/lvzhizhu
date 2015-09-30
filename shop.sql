@@ -106,16 +106,18 @@ CREATE TABLE IF NOT EXISTS `lzz_property`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `fieldname` VARCHAR(100) NOT NULL DEFAULT '',
     `fieldtype` ENUM('text','radio','select','checkbox'),
-    `fieldvalues` VARCHAR(500) NOT NULL DEFAULT '',
-    `propertycateid` BIGINT UNSIGNED NOT NULL DEFAULT '0',
+    `categoryid` BIGINT UNSIGNED NOT NULL DEFAULT '0',
     `createtime` INT UNSIGNED NOT NULL DEFAULT 0
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-#商品属性分类
-CREATE TABLE IF NOT EXISTS `lzz_property_cate`(
+#商品属性对应表
+CREATE TABLE IF NOT EXISTS `lzz_product_property`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `name` VARCHAR(50) NOT NULL DEFAULT '' UNIQUE,
-    `pid` BIGINT UNSIGNED NOT NULL DEFAULT '0',
+    `value` VARCHAR(5000) NOT NULL DEFAULT '',
+    `productid` BIGINT UNSIGNED NOT NULL DEFAULT '0',
+    `propertyid` BIGINT UNSIGNED NOT NULL DEFAULT '0',
+	`isshow` ENUM('0','1') NOT NULL DEFAULT '1',
+	`ischoice` ENUM('0','1') NOT NULL DEFAULT '0',
     `createtime` INT UNSIGNED NOT NULL DEFAULT 0
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
