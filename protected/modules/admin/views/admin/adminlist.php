@@ -197,7 +197,7 @@
 
 </div>
 <!-- Page content end -->
-<script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/jquery.js"></script>
+
 <script>
     $(function(){
 

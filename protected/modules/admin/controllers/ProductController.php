@@ -28,7 +28,12 @@ class ProductController extends Controller{
         foreach($pcates as $cate){
             $cates[$cate->id] = $cate->name;
         }
-        $this->render('productadd',array('model'=>$model,'cates'=>$cates));
+        $brand = Brand::model()->findAll();
+        $brands = array('无品牌');
+        foreach($brand as $b){
+            $brands[$b->id] = $b->name;
+        }
+        $this->render('productadd',array('model'=>$model,'categories'=>$cates,'brands'=>$brands));
     }
 
     public function actionIndex(){

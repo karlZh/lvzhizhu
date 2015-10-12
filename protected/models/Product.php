@@ -18,33 +18,32 @@ class Product extends CActiveRecord{
 
     public function rules(){
         return array(
-            array('fieldname','required','message'=>'名称不能为空'),
-            array('fieldname','checkUni'),
-            array('fieldtype','required','message'=>'类型不能为空'),
+            array('title','required','message'=>'名称不能为空'),
             array('categoryid','required','message'=>'分类不能为空'),
+            array('describe','required','message'=>'描述不能为空'),
+            array('cover','required','message'=>'封面图片不能为空'),
+            array('price','required','message'=>'价格不能为空'),
+            array('cover','file','maxFiles'=>1,'maxSize'=>3*1024*1024,'minSize'=>1,'tooLarge'=>'文件不能超过3M','types'=>array('png','gif','jpg','jpeg'),'wrongType'=>'上传文件类型不正确'),
+            array('inventory','required','message'=>'库存不能为空'),
+
         );
     }
 
     public function attributeLabels(){
         return array(
-            'fieldname'=>'属性名称',
-            'fieldtype'=>'属性值类型',
-            'categoryid'=>'属性分类'
+            'categoryid'=>'商品分类',
+            'title'=>'商品名称',
+            'describe'=>'商品描述',
+            'price'=>'商品价格',
+            'originalprice'=>'商品原价',
+            'inventory'=>'商品库存',
+            'brandid'=>'商品品牌',
+            'ishot'=>'是否热卖',
+            'isputaway'=>'是否上架',
+            'isonsale'=>'是否促销',
+            'onsaleprice'=>'促销价',
+            'cover'=>'封面图片',
         );
-    }
-
-    public function checkUni(){
-        if(!$this->hasErrors()) {
-            $data = $this->find(
-                'categoryid=:id and fieldname=:name',
-                array(':id' => $this->categoryid,
-                    ':name' => $this->fieldname
-                )
-            );
-            if($data){
-                $this->addError('fieldname','该名称已经添加');
-            }
-        }
     }
 
 

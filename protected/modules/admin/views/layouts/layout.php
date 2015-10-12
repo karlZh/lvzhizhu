@@ -72,6 +72,8 @@
 
         <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/vendor/parsley/parsley.min.js"></script>
 
+        <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/admin/js/vendor/parsley/zh_cn.js"></script>
+
     </head>
 <body class="bg-3">
 
