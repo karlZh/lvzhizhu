@@ -64,7 +64,6 @@
                         <ul>
                             <li><a href="#tab1" data-toggle="tab">商品基本信息</a></li>
                             <li><a href="#tab2" data-toggle="tab">商品扩展属性</a></li>
-                            <li><a href="#tab3" data-toggle="tab">商品上架</a></li>
                         </ul>
                     </div>
                     <!-- /tile widget -->
@@ -356,12 +355,11 @@
     </div>
 </div>-->
 
-<?php $this->endWidget(); ?>
 </div>
 
 <div class="tab-pane" id="tab2">
 
-<form class="form-horizontal form2" role="form" parsley-validate id="contact">
+<!--<form class="form-horizontal form2" role="form" parsley-validate id="contact">-->
 
     <div class="form-group">
         <label for="email" class="col-sm-2 control-label">Email *</label>
@@ -384,33 +382,12 @@
         </div>
     </div>
 
-</form>
 
-</div>
-
-<div class="tab-pane" id="tab3">
-
-<form class="form-horizontal form3" role="form" parsley-validate id="eula">
-
-    <div class="form-group">
-        <div class="col-sm-12">
-            <div class="checkbox">
-                <input type="checkbox" value="1" id="opt01" parsley-trigger="change" parsley-required="true" name="eula">
-                <label for="opt01">EULA acceptation *</label>
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" value="1" id="opt02" name="newsletter">
-                <label for="opt02">Receive newsletter</label>
-            </div>
-        </div>
-    </div>
-
-</form>
 
 </div>
 
 </div>
-
+                        <?php $this->endWidget(); ?>
 </div>
 <!-- /tile body -->
 
