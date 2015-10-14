@@ -23,6 +23,7 @@ class Product extends CActiveRecord{
             array('describe','required','message'=>'描述不能为空'),
             array('cover','required','message'=>'封面图片不能为空'),
             array('price','required','message'=>'价格不能为空'),
+            array('originalprice,brandid,ishot,isonsale,onsaleprice,isputaway','safe'),
             array('cover','file','maxFiles'=>1,'maxSize'=>3*1024*1024,'minSize'=>1,'tooLarge'=>'文件不能超过3M','types'=>array('png','gif','jpg','jpeg'),'wrongType'=>'上传文件类型不正确'),
             array('inventory','required','message'=>'库存不能为空'),
 

@@ -77,7 +77,7 @@
 
                         <div class="tab-content">
 
-                            <div class="tab-pane" id="tab1">
+<div class="tab-pane" id="tab1">
 
 <?php $form = $this->beginWidget(
     'CActiveForm',
@@ -85,7 +85,8 @@
         'htmlOptions'=>array(
             "class"=>"form-horizontal form1",
             "role"=>"form",
-            "parsley-validate"=>"parsley-validate"
+            "parsley-validate"=>"parsley-validate",
+            "enctype"=>"multipart/form-data",
         )
     )
 ); ?>
@@ -251,27 +252,21 @@
         )
     ); ?>
     <div class="col-sm-10">
-        <div class="onoffswitch greensea">
-            <?php echo $form->checkbox(
-                $model,
-                'ishot',
-                array(
-                    "class"=>"onoffswitch-checkbox",
-                    "id"=>"ishot",
-                    "checked"=>"",
-                )
-            ); ?>
-            <label class="onoffswitch-label" for="ishot">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
-        </div>
+        <?php echo $form->radioButtonList($model,'ishot',
+            array(1=>'是',0=>'否'),
+            array(
+                "class"=>"",
+                "id"=>"ishot",
+                "parsley-trigger"=>"change",
+                "parsley-required"=>"true",
+                'separator'=>'&nbsp;&nbsp;'
+        )) ?>
 
     </div>
 
 </div>
 
-<div class="form-group">
+    <div class="form-group">
     <?php echo $form->labelEx(
         $model,
         'isputaway',
@@ -281,21 +276,15 @@
         )
     ); ?>
     <div class="col-sm-10">
-        <div class="onoffswitch greensea">
-            <?php echo $form->checkbox(
-                $model,
-                'isputaway',
-                array(
-                    "class"=>"onoffswitch-checkbox",
-                    "id"=>"isputaway",
-                    "checked"=>"checked",
-                )
-            ); ?>
-            <label class="onoffswitch-label" for="isputaway">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
-        </div>
+        <?php echo $form->radioButtonList($model,'isputaway',
+            array(1=>'是',0=>'否'),
+            array(
+                "class"=>"",
+                "id"=>"isputaway",
+                "parsley-trigger"=>"change",
+                "parsley-required"=>"true",
+                'separator'=>'&nbsp;&nbsp;'
+            )) ?>
 
     </div>
 
@@ -311,21 +300,15 @@
         )
     ); ?>
     <div class="col-sm-10">
-        <div class="onoffswitch greensea">
-            <?php echo $form->checkbox(
-                $model,
-                'isonsale',
-                array(
-                    "class"=>"onoffswitch-checkbox",
-                    "id"=>"isonsale",
-                    "checked"=>"",
-                )
-            ); ?>
-            <label class="onoffswitch-label" for="isonsale">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
-        </div>
+        <?php echo $form->radioButtonList($model,'isonsale',
+            array(1=>'是',0=>'否'),
+            array(
+                "class"=>"",
+                "id"=>"isonsale",
+                "parsley-trigger"=>"change",
+                "parsley-required"=>"true",
+                'separator'=>'&nbsp;&nbsp;'
+            )) ?>
 
     </div>
 
@@ -349,85 +332,40 @@
     </div>
 </div>
 
-                                <!--<div class="form-group form-footer">
-                                    <div class="col-sm-offset-2 col-sm-12">
-                                        <button type="submit" class="btn btn-primary">添加</button>
-    </div>
-</div>-->
-
 </div>
 
 <div class="tab-pane" id="tab2">
 
-<!--<form class="form-horizontal form2" role="form" parsley-validate id="contact">-->
+    <div class="form-horizontal form2" id="property">
 
-    <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">Email *</label>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-type="email" parsley-validation-minlength="1">
-        </div>
+
     </div>
 
-    <div class="form-group">
-        <label for="website" class="col-sm-2 control-label">Website</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="website" parsley-trigger="change" parsley-minlength="4" parsley-type="url" parsley-validation-minlength="1">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="phonenum" class="col-sm-2 control-label">Phone Number</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="phonenum" parsley-trigger="change" parsley-type="phone" parsley-validation-minlength="0" placeholder="1234567891">
-        </div>
-    </div>
-
-
+</div>
+    <?php $this->endWidget(); ?>
 
 </div>
 
-</div>
-                        <?php $this->endWidget(); ?>
 </div>
 <!-- /tile body -->
 
-                    <!-- tile footer -->
-                    <div class="tile-footer border-top color white rounded-bottom-corners nopadding">
-                        <ul class="pager pager-full wizard">
-                            <li class="previous"><a href="javascript:;"><i class="fa fa-arrow-left fa-lg"></i></a></li>
-                            <li class="next"><a href="javascript:;"><i class="fa fa-arrow-right fa-lg"></i></a></li>
-                            <li class="next finish" style="display:none;"><a href="javascript:;"><i class="fa fa-check fa-lg"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- /tile footer -->
-
-
-
-
-                </section>
-                <!-- /tile -->
-
-
-
-
-            </div>
-            <!-- /col 12 -->
-
-
-
-        </div>
-        <!-- /row -->
-
-
-
-    </div>
-    <!-- /content container -->
-
-
-
-
-
-
+<!-- tile footer -->
+<div class="tile-footer border-top color white rounded-bottom-corners nopadding">
+<ul class="pager pager-full wizard">
+    <li class="previous"><a href="javascript:;"><i class="fa fa-arrow-left fa-lg"></i></a></li>
+    <li class="next"><a href="javascript:;"><i class="fa fa-arrow-right fa-lg"></i></a></li>
+    <li class="next finish" style="display:none;"><a href="javascript:;"><i class="fa fa-check fa-lg"></i></a></li>
+</ul>
+</div>
+<!-- /tile footer -->
+</section>
+<!-- /tile -->
+</div>
+<!-- /col 12 -->
+</div>
+<!-- /row -->
+</div>
+<!-- /content container -->
 </div>
 <!-- Page content end -->
 <script>
@@ -518,14 +456,43 @@
 </script>
 
 <script>
-    var i = 1;
-    $("#isonsale").change(function(){
-        if(i==1){
-            $(".form-group.onsaleprice").css("display","block")
-            i=0;
-        }else{
-            $(".form-group.onsaleprice").css("display","none")
-            i=1;
-        }
+    $("#Product_isonsale_1").click(function(){
+        $(".form-group.onsaleprice").css("display","none")
     })
+    $("#Product_isonsale_0").click(function(){
+        $(".form-group.onsaleprice").css("display","block")
+    })
+
+    if($("#Product_isonsale_0").attr("checked")=='checked'){
+        $(".form-group.onsaleprice").css("display","block")
+    }
+
+    $(".fa.fa-check.fa-lg").click(function(){
+        if($('.form1').parsley('validate')){
+
+            $(".form1").append($('.form2').find(":input"));
+            $(".form1").submit();
+
+        }
+    });
+
+    $("#categoryid").change(function(){
+        var categoryid = $(this).val();
+        $.get("<?php echo $this->createUrl('property/getproperty') ?>",{cid:categoryid},function(data){
+            if(data.length>0){
+                for(var i in data){
+                   var ipts = '<div class="form-group">';
+                   ipts += '<label for="field'+i+'" class="col-sm-2 control-label">'+data[i].fieldname+'</label>';
+                   ipts += '<div class="col-sm-10">';
+                   ipts += '<input type="text" name="propertyid['+data[i].id+']" class="form-control add" placeholder="'+data[i].fieldtype+'类型">';
+                   ipts += '</div>';
+                   ipts += '</div>';
+                   $("#property").append(ipts);
+                }
+            }else{
+                $("#property").html('该分类暂无属性');
+            }
+        },'json');
+    }).change();
+
 </script>

@@ -96,4 +96,29 @@ class PropertyController extends Controller{
         $this->render('propertymod',array('model'=>$currCate,'propertycates'=>$Propertycates));
     }
 
+    public function actionGetProperty(){
+        $cateid = $_GET['cid'];
+        if(empty($cateid)){
+            $this->error('error_params','categoryid参数为空',false);
+        }
+        $data = Property::model()->findAll(
+            'categoryid=:cid',
+            array(':cid'=>$cateid)
+        );
+        if(!empty($data)) {
+            foreach ($data as $p) {
+                $ps[] = array(
+                    'id' => $p->id,
+                    'fieldname' => $p->fieldname,
+                    'fieldtype' => $p->fieldtype,
+                    'categoryid' => $p->categoryid,
+                    'createtime' => $p->createtime,
+                );
+            }
+        }else{
+            $ps = array();
+        }
+        echo json_encode($ps);
+    }
+
 }
