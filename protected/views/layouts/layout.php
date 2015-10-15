@@ -9,10 +9,10 @@
 <!doctype html>
 <html>
 <head>
-    <title>仿拍鞋网商城首页触屏版html5手机wap购物网站模板下载-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+    <title>绿蜘蛛电商平台</title>
     <meta charset="utf-8">
-    <meta name="keywords" content="拍鞋网,拍鞋网官方网站,拍鞋网商城" />
-    <meta name="description" content="买鞋子哪个网站好，当然首选拍鞋网!中国最早成立的正品鞋子购物网站,国内最大的品牌鞋子销售广场。所售鞋子100%厂家授权,全国包邮,货到付款,提供最完美的购物体验！" />
+    <meta name="keywords" content="绿蜘蛛电商平台" />
+    <meta name="description" content="绿蜘蛛电商平台" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="bookmark" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -28,7 +28,9 @@
     <!--在设置书签的时候可以显示好看的图标-->
     <!--<link rel="apple-touch-icon" href="/touch/iphon_tetris_icon.png"/>-->
     <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl ?>/assets/home/css/com/com.css"/>
-    <script>var PX_HELP_DATA=['','uo74au74aqpc8801g3htt5l2v7',['touch','home','index'],'2014/04/09 09:12:46',0,false]; var DOMIN = {MAIN:"../m.paixie.com/",HELP:"../help.paixie.net/",TUAN:"../tuan.paixie.net/",WAP:"../wap.paixie.net/",UNION:"../union.paixie.net/",VIPSHOP:"../v.paixie.net/"};</script>
+    <script>
+        var PX_HELP_DATA=['','uo74au74aqpc8801g3htt5l2v7',['touch','home','index'],'2014/04/09 09:12:46',0,false]; var DOMIN = {MAIN:"../m.greenspider.com/",HELP:"../help.greenspider.net/",TUAN:"../tuan.greenspider.net/",WAP:"../wap.greenspider.net/",UNION:"../union.greenspider.net/",VIPSHOP:"../v.greenspider.net/"};
+    </script>
 
     <script>
 
@@ -82,7 +84,8 @@
         //	}
     </script>
     <div class="com-header-area" id="js-com-header-area">
-        <a href="default.htm" class="com-header-logo"></a>
+        <!--<a href="" class="com-header-logo">123123</a>-->
+        <a href="" style="line-height:45px;margin-left:15px;color:white;font-weight:bold;font-size:15px;">绿蜘蛛电商平台</a>
         <dfn></dfn>
         <p>
             <a class="com-header-search" id="js-com-header-search"><del></del></a>
@@ -91,17 +94,16 @@
             <a href="<?php echo $this->createUrl('cart/index') ?>" class="com-header-cart "><b id="header-cart-num">0</b><del></del></a>
         </p>
         <div class="clear"></div>
-        <form action="/s.php" method="post">
+        <form action="" method="post">
             <strong>
                 <input type="text" name="keyword" id="js-com-search-text" value=""/>
                 <input type="submit" value=" "/>
             </strong>
             <div id="js-com-search-recommend">
                 <div></div>
-                <a href="p-_m0003s0017_1.html@asc=id"  style="color:#000000	">女单鞋</a>
-                <a href="p-m0001_id;1.html"  style="color:#ed1749">运动新品</a>
-                <a href="p-m0001s0014_1.html"  style="color:#000000">篮球鞋</a>
-
+                <a href=""  style="color:#000000">女单鞋</a>
+                <a href=""  style="color:#ed1749">运动新品</a>
+                <a href=""  style="color:#000000">篮球鞋</a>
             </div>
         </form>
     </div>
@@ -110,7 +112,7 @@
     </div>
     <div class="com-footer-area" id="js-com-footer-area">
         <div class="com-footer-nav">
-            <a href="default.htm">首页</a><a href="help/index.html">帮助中心</a><a href="feedback/index.html">反馈建议</a>
+            <a href="">首页</a><a href="">帮助中心</a><a href="">反馈建议</a>
         </div>
         <div class="com-footer">
             <p class="com-policy">
@@ -131,30 +133,28 @@
             <br/>
             <p>
                 <strong>
-                    <a style="color:#769fbf;" href="login/default.htm">登录</a>&nbsp;&nbsp;
-                    <a style="color:#769fbf;" href="register/default.htm">注册</a>
+                    <a style="color:#769fbf;" href="">登录</a>&nbsp;&nbsp;
+                    <a style="color:#769fbf;" href="">注册</a>
                 </strong>
             </p>
             <br/>
             <p>
                 <strong>
-                    <a href="../wap.paixie.net/default.htm">极速版</a>&nbsp;&nbsp;
-                    <a href="default.htm">触屏版</a>&nbsp;&nbsp;
-                    <a href="help/app.html">客户端</a>
+                    <a href="">极速版</a>&nbsp;&nbsp;
+                    <a href="">触屏版</a>&nbsp;&nbsp;
+                    <a href="">客户端</a>
                 </strong>
             </p>
             <br/>
-            © 2007-2013 Paixie All Rights Reserved<br/>
-            闽B2-20110084
+            © 2015 绿蜘蛛 All Rights Reserved<br/>
+            京B2-20110084
             <br />
-            <p style="text-align: left;border-bottom:none;display:table-cell; padding-left: 10px; padding-right: 10px;">友情链接：
-                <a href='../dh.sogou.com/@fr=0005-001s'>网址导航 </a>
-                <a href='../m.roboo.com/@f=1403070005'>儒豹搜索</a>
-                <a href='../wap.kanshu.com/index@cnl=paixie&s=1'>看书网</a>
+            <!--<p style="text-align: left;border-bottom:none;display:table-cell; padding-left: 10px; padding-right: 10px;">友情链接：
+                <a href=''>网址导航 </a>
                 <a href='../m.soufun.com/esf/hz.html@sf_source=wapzu_hz_paixie'>搜房</a>
                 <a href='../wapzk.net/@ff=1513897'>掌酷门户</a>
                 <a href='../123hw.com/default.htm'>123好网址</a>
-            </p>
+            </p>-->
         </div>
     </div>
 </div>
@@ -179,11 +179,5 @@
     ga('send', 'pageview');
 
 </script>
-<div style="display:none;">
-    <script type="text/javascript">
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F188d758416f87a421ba1c700763fa0bf' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-</div>
 </body>
 </html>

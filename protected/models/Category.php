@@ -11,6 +11,8 @@ class Category extends CActiveRecord{
     const SHOW_SELECT='————请选择————';
     const SHOW_TOPCATGORY='————顶级分类————';
 
+    public $sons = array();
+
     public static function model($className=__CLASS__){
         return parent::model($className);
     }
@@ -32,6 +34,17 @@ class Category extends CActiveRecord{
             'name'=>'分类名称',
             'pid'=>'所属分类',
         );
+    }
+
+    public function getSons($id,&$sons=array()){
+        $data = $this->findAll('pid=:pid',array(':pid'=>$id));
+        if(!empty($data)){
+            foreach($data as $cate) {
+                $sons[] = $cate;
+                $this->getSons($cate->id,$sons);
+            }
+        }
+        return $sons;
     }
 
 

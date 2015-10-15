@@ -21,21 +21,25 @@ class ProductController extends Controller{
                 $model->cover = $pic;
                 $model->adminid = Yii::app()->session['admin']['adminid'];
                 $model->createtime = time();
-                $primary = 0;
                 if($model->save(false)){
                     $primary = $model->getPrimaryKey();
-                    $property = array();
+                    mkdir(self::PRODUCT_PIC_PATH.$primary,0755);
+                    copy(self::PRODUCT_PIC_PATH.$pic,self::PRODUCT_PIC_PATH.$primary.'/'.$pic);
+                    unlink(self::PRODUCT_PIC_PATH.$pic);
                     foreach($_POST['propertyid'] as $k=>$v){
-                        $property[] = array(
-                            'value'=>$v,
+                        $arr = array(
+                            'value'=>serialize($v),
                             'productid'=>$primary,
                             'propertyid'=>$k,
                             'isshow'=>'1',
-                            'ischoice'=>'1'
+                            'ischoice'=>'1',
+                            'createtime'=>time(),
                         );
+                        $productProperty = new ProductProperty();
+                        $productProperty->attributes = $arr;
+                        $productProperty->save();
                     }
-                    $command = Yii::app()->db->createCommand();
-                    $command->insertSeveral('{{product_property}}', $property);
+
                     Yii::app()->user->setFlash('info','添加成功');
                 }else{
                     Yii::log('添加商品失败,params:'.json_encode($_REQUEST),CLogger::LEVEL_ERROR);
@@ -53,27 +57,23 @@ class ProductController extends Controller{
         foreach($brand as $b){
             $brands[$b->id] = $b->name;
         }
-        if(!empty($primary)) {
-            $properties = array();
-
-        }
         $this->render('productadd',array('model'=>$model,'categories'=>$cates,'brands'=>$brands));
     }
 
     public function actionIndex(){
         $criteria = new CDbCriteria;
-        $model = Property::model();
+        $model = Product::model();
         $total = $model->count($criteria);
         $pages = new CPagination($total);
         $pages->pageSize = self::PAGE_SIZE;
         $pages->applyLimit($criteria);
-        $properties = $model->findAll($criteria);
+        $products = $model->findAll($criteria);
 
         $this->render(
-            'propertylist',
+            'productlist',
             array(
                 'pager'=>$pages,
-                'properties'=>$properties
+                'products'=>$products
             )
         );
     }
@@ -83,14 +83,19 @@ class ProductController extends Controller{
         if(empty($id)){
             $this->error('error_params','id参数为空',false);
         }
-        $model = Property::model();
+        $model = Product::model();
         if($model->deletebypk($id)){
+            foreach(glob(self::PRODUCT_PIC_PATH.'/'.$id.'/*') as $pic){
+                unlink($pic);
+            }
+            ProductProperty::model()->deleteAll('productid=:pid',array(':pid'=>$id));
+            @unlink(self::PRODUCT_PIC_PATH.'/'.$id);
             Yii::app()->user->setFlash('info','删除成功');
         }else{
             Yii::log('删除属性失败,params:'.json_encode($_GET),Constants::ERROR_DELETE);
             Yii::app()->user->setFlash('info','删除失败');
         }
-        $this->redirect(array('property/index'));
+        $this->redirect(array('product/index'));
     }
 
     public function actionMod(){

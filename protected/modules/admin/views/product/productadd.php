@@ -496,3 +496,8 @@
     }).change();
 
 </script>
+<?php
+    if(Yii::app()->user->hasFlash('info')){
+        echo '<script>alert("'.Yii::app()->user->getFlash('info').'")</script>';
+    }
+?>

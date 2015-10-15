@@ -521,7 +521,7 @@
                             </ul>
                         </li>
 
-                        <li>
+                        <!--<li>
                             <a href="buttons.html">
                                 <i class="fa fa-tint"></i> Buttons & Icons
                             </a>
@@ -626,14 +626,14 @@
                             <a href="charts.html">
                                 <i class="fa fa-bar-chart-o"></i> Charts & Graphs
                             </a>
-                        </li>
+                        </li>-->
 
 
                     </ul>
 
                 </li>
 
-                <li class="summary" id="order-summary">
+                <!--<li class="summary" id="order-summary">
                     <a href="#" class="sidebar-toggle underline" data-toggle="#order-summary">Orders Summary <i class="fa fa-angle-up"></i></a>
 
                     <div class="media">
@@ -690,7 +690,7 @@
                 </li>
 
 
-            </ul>
+            </ul>-->
             <!-- Sidebar end -->
 
 
