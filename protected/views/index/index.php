@@ -82,22 +82,42 @@
 ?>
 <?php foreach($cates as $key=>$cate): ?>
 <div class="pxui-area styles">
+    <?php if($key%2==0): ?>
     <h2  style="background-color: <?php echo $h2bg[$key] ?> ; " ><a href=""  style="color:#FFFFFF;"  ><?php echo $cate->name ?></a></h2>
-    <a class="max" href=""><img src="http://img-cdn2.paixie.net/newspic/20140408/1396917342e17426.jpg" width="120" height="140"/></a>
-    <div>
-        <p>
-        <?php foreach($cate->sons as $k=>$son): ?>
-            <?php
-                $style = '';
-                if($k%2==1){
-                    $style = 'color:#FFFFFF;background-color:'.$h2bg[$key].';border: 1px solid '.$h2bg[$key].';';
-                }
-            ?>
-            <a href="" style="margin-left:3px;<?php echo $style ?>" ><?php echo $son->name ?></a>
-        <?php endforeach; ?>
-            <a href="" class="more" >更多<del><i class="arrow-right"></i></del></a>
-        </p>
-    </div>
+        <a class="max" href=""><img src="http://img-cdn2.paixie.net/newspic/20140408/1396917342e17426.jpg" width="120" height="140"/></a>
+        <div>
+            <p>
+                <?php foreach($cate->sons as $k=>$son): ?>
+                    <?php
+                    $style = '';
+                    if($k%2==1){
+                        $style = 'color:#FFFFFF;background-color:'.$h2bg[$key].';border: 1px solid '.$h2bg[$key].';';
+                    }
+                    ?>
+                    <a href="" style="margin-left:3px;<?php echo $style ?>" ><?php echo $son->name ?></a>
+                <?php endforeach; ?>
+                <a href="" class="more" >更多<del><i class="arrow-right"></i></del></a>
+            </p>
+        </div>
+    <?php else: ?>
+        <div>
+            <p>
+                <?php foreach($cate->sons as $k=>$son): ?>
+                    <?php
+                    $style = '';
+                    if($k%2==1){
+                        $style = 'color:#FFFFFF;background-color:'.$h2bg[$key].';border: 1px solid '.$h2bg[$key].';';
+                    }
+                    ?>
+                    <a href="" style="margin-left:3px;<?php echo $style ?>" ><?php echo $son->name ?></a>
+                <?php endforeach; ?>
+                <a href="" class="more" >更多<del><i class="arrow-right"></i></del></a>
+            </p>
+        </div>
+        <a class="max" href=""><img src="http://img-cdn2.paixie.net/newspic/20140408/1396917342e17426.jpg" width="120" height="140"/></a>
+        <h2  style="background-color: <?php echo $h2bg[$key] ?> ; " ><a href=""  style="color:#FFFFFF;"  ><?php echo $cate->name ?></a></h2>
+    <?php endif; ?>
+
 </div>
 <?php endforeach; ?>
 <!--<div class="pxui-area">

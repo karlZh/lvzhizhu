@@ -17,7 +17,15 @@ class CategoryController extends Controller{
      * @since v1.0
      */
     public function actionIndex(){
-        $this->render('categories');
+        $pcates = Category::model()->findAll('pid=0');
+        foreach($pcates as $pcate){
+            $pcate->sons = Category::model()->getSons($pcate->id);
+        }
+
+        $data = array(
+            'cates'=>$pcates
+        );
+        $this->render('categories',$data);
     }
 
 } 
