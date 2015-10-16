@@ -17,7 +17,17 @@ class ProductController extends Controller{
      * @since v1.0
      */
     public function actionList(){
-        $this->render('products');
+        $cid = $_GET['categoryid'];
+        if(empty($cid)){
+            $this->error('error_params','categoryid参数为空',false);
+        }
+        $products = Product::model()->getProducts($cid);
+        var_dump($products);exit;
+        $data = array(
+            'products'=>$products
+        );
+
+        $this->render('products',$data);
     }
 
     /*
