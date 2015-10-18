@@ -84,7 +84,7 @@
 <div class="pxui-area styles">
     <?php if($key%2==0): ?>
     <h2  style="background-color: <?php echo $h2bg[$key] ?> ; " ><a href=""  style="color:#FFFFFF;"  ><?php echo $cate->name ?></a></h2>
-        <a class="max" href=""><img src="http://img-cdn2.paixie.net/newspic/20140408/1396917342e17426.jpg" width="120" height="140"/></a>
+        <a class="max" href=""><img src="<?php echo Yii::app()->request->baseUrl ?>/assets/home/images/good/1396917342e17426.jpg" width="120" height="140"/></a>
         <div>
             <p>
                 <?php foreach($cate->sons as $k=>$son): ?>

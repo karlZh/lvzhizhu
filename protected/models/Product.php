@@ -8,6 +8,8 @@
 
 class Product extends CActiveRecord{
 
+    public $brandname;
+
     public static function model($className=__CLASS__){
         return parent::model($className);
     }
@@ -49,10 +51,9 @@ class Product extends CActiveRecord{
 
     public function getProducts($cid){
         $products = $this->findAll('categoryid=:cid',array(':cid'=>$cid));
-        $data = Category::model()->getSons($cid)->sons;
-        var_dump($data);exit;
-        $sons = Category::model()->getSons($cid)->sons;
-        foreach($sons as $son){
+        $data = Category::model()->getSons($cid);
+
+        foreach($data as $son){
             $sonProducts = $this->findAll('categoryid=:cid',array(':cid'=>$son->id));
             $products = array_merge($products,$sonProducts);
         }

@@ -36,7 +36,7 @@
 
         var JAVASCRIPT_LIB = (('\v' !== 'v') ? 'zepto' : 'jquery');
         JAVASCRIPT_LIB="jquery";
-        document.write('<script src="http://ued.paixie.net/scripts/public/jquery.js"><\/script>');
+        document.write('<script src="<?php echo Yii::app()->request->baseUrl ?>/assets/home/js/public/jquery.js"><\/script>');
 
 
         DOMIN.MAIN = './';

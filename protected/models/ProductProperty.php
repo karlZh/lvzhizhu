@@ -8,6 +8,8 @@
 
 class ProductProperty extends CActiveRecord{
 
+    public $propertyname;
+
     public static function model($className=__CLASS__){
         return parent::model($className);
     }

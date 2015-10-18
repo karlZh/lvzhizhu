@@ -40,6 +40,11 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 
+        'curl' => array(
+            'class' => 'ext.Curl',
+            'options' => array()
+        ),
+
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

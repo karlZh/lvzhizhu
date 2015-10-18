@@ -23,23 +23,25 @@ class ProductController extends Controller{
                 $model->createtime = time();
                 if($model->save(false)){
                     $primary = $model->getPrimaryKey();
+                    if(!file_exists(self::PRODUCT_PIC_PATH.$primary))
                     mkdir(self::PRODUCT_PIC_PATH.$primary,0755);
                     copy(self::PRODUCT_PIC_PATH.$pic,self::PRODUCT_PIC_PATH.$primary.'/'.$pic);
                     unlink(self::PRODUCT_PIC_PATH.$pic);
-                    foreach($_POST['propertyid'] as $k=>$v){
-                        $arr = array(
-                            'value'=>serialize($v),
-                            'productid'=>$primary,
-                            'propertyid'=>$k,
-                            'isshow'=>'1',
-                            'ischoice'=>'1',
-                            'createtime'=>time(),
-                        );
-                        $productProperty = new ProductProperty();
-                        $productProperty->attributes = $arr;
-                        $productProperty->save();
+                    if(!empty($_POST['propertyid'])) {
+                        foreach ($_POST['propertyid'] as $k => $v) {
+                            $arr = array(
+                                'value' => serialize($v),
+                                'productid' => $primary,
+                                'propertyid' => $k,
+                                'isshow' => '1',
+                                'ischoice' => '1',
+                                'createtime' => time(),
+                            );
+                            $productProperty = new ProductProperty();
+                            $productProperty->attributes = $arr;
+                            $productProperty->save();
+                        }
                     }
-
                     Yii::app()->user->setFlash('info','添加成功');
                 }else{
                     Yii::log('添加商品失败,params:'.json_encode($_REQUEST),CLogger::LEVEL_ERROR);
@@ -54,8 +56,10 @@ class ProductController extends Controller{
         }
         $brand = Brand::model()->findAll();
         $brands = array('无品牌');
-        foreach($brand as $b){
-            $brands[$b->id] = $b->name;
+        if(!empty($brand)) {
+            foreach ($brand as $b) {
+                $brands[$b->id] = $b->name;
+            }
         }
         $this->render('productadd',array('model'=>$model,'categories'=>$cates,'brands'=>$brands));
     }

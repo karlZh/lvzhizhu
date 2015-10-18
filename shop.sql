@@ -1,5 +1,5 @@
-CREATE DATABASE `shop`;
-use `shop`;
+#CREATE DATABASE `shop`;
+#use `shop`;
 #管理员
 CREATE TABLE IF NOT EXISTS `lzz_admin`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
