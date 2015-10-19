@@ -60,6 +60,8 @@ class ProductController extends Controller{
         $brand = Brand::model()->findbypk($product->brandid);
         if(!empty($brand)){
             $product->brandname = $brand->name;
+        }else{
+            $product->brandname = '无品牌';
         }
 
         $properties = ProductProperty::model()->findAll('productid=:pid',array(':pid'=>$id));

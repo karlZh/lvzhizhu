@@ -68,6 +68,9 @@
     <!--</div>
     <div style="clear:both;height:4px;margin: 0;padding: 0px; width:100%;"></div>
 </div>-->
+<form action="<?php echo $this->createUrl('cart/add') ?>" method="post">
+    <input type="hidden" name="productid" value="<?php echo $product->id ?>">
+    <input type="hidden" name="price" value="<?php echo $product->price ?>">
 <a class="pxui-gray-button" href="<?php echo $this->createUrl('product/picdetail',array('productid'=>$product->id)) ?>">点击查看图文详情&nbsp;&nbsp;<i class="arrow-right"></i></a>
 
 <ul class="goodinfo" id="js-goodinfo">
@@ -127,7 +130,7 @@
                         <span class="pxui-select num">
                             <span>1</span>
                             <i></i>
-                            <select>
+                            <select name="num">
                                 <?php if($product->inventory>10){$max=10;}else{$max=$product->inventory;} ?>
                                 <?php for($i=1;$i<=$max;$i++ ): ?>
                                 <option value="<?php echo $i ?>"><?php echo $i ?></option>
@@ -139,7 +142,8 @@
     </li>
     <!--size-message-end-->
 </ul>
-<input type="button" class="pxui-light-button addtocart" value="加入购物车" onclick="location.href='<?php echo $this->createUrl('cart/add') ?>'"/>
+<input type="submit" class="pxui-light-button" value="加入购物车" />
+</form>
 <h3 id="js-attrs-title">商品属性</h3>
 <ul class="attrs">
     <li>货号：<?php echo $product->id ?></li>

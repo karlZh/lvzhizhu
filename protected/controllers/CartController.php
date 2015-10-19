@@ -29,8 +29,20 @@ class CartController extends Controller{
      * @since v1.0
      */
     public function actionAdd(){
+        if(!empty($_POST)){
+            $_POST['amount'] = $_POST['price']*$_POST['num'];
+            $_SESSION['cart'][] = $_POST;
+        }
         if(!isset($_SESSION['islogin'])||$_SESSION['islogin']!=1){
             header('location:'.$this->createUrl('wechat/welogin'));
+            return ;
+        }else{
+            $_SESSION['islogin'] = 1;
+            $_POST['createtime'] = time();
+            $_POST['memberid'] = $_SESSION['memberid'];
+            $model = new Cart;
+            $model->attributes = $_POST;
+            $model->save();
         }
     }
 } 
