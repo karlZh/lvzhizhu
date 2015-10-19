@@ -47,11 +47,24 @@ class WechatController extends Controller{
             $json = WeChat::getUserInfo($data['access_token'],$openid);
             $userinfo = json_decode($json,true);
 
-            if($userinfo['errcode']){
+            if(isset($userinfo['errcode'])){
                 throw new Exception('获取用户信息失败：'.$userinfo['errcode'].":".$userinfo['errmsg']);
             }
 
+            $model = new Member();
+            $data = $model->find('openid=:id',array(':id'=>$openid));
+            if($data){
+                $_SESSION['member'] = $data->attributes;
+            }else {
+                $model->attributes = $userinfo;
+                $model->createtime = time();
+                $model->save(false);
+                $_SESSION['member'] = $userinfo;
+                $_SESSION['member']['id'] = $model->getPrimaryKey();
+                $_SESSION['member']['islogin'] = 1;
+            }
 
+            header("location:".$this->createUrl('cart/add'));
 
         }catch(Exception $e){
             $this->error('error_params',$e->getMessage(),false);

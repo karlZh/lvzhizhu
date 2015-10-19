@@ -17,6 +17,7 @@ class CartController extends Controller{
      * @since v1.0
      */
     public function actionIndex(){
+
         $this->render('cartlist');
     }
 
@@ -33,16 +34,17 @@ class CartController extends Controller{
             $_POST['amount'] = $_POST['price']*$_POST['num'];
             $_SESSION['cart'][] = $_POST;
         }
-        if(!isset($_SESSION['islogin'])||$_SESSION['islogin']!=1){
+        if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1){
             header('location:'.$this->createUrl('wechat/welogin'));
             return ;
         }else{
-            $_SESSION['islogin'] = 1;
             $_POST['createtime'] = time();
-            $_POST['memberid'] = $_SESSION['memberid'];
+            $_POST['memberid'] = $_SESSION['member']['id'];
             $model = new Cart;
             $model->attributes = $_POST;
-            $model->save();
+            $model->save(false);
         }
+
+        header("location:".$this->createUrl('cart/index'));
     }
 } 
