@@ -17,8 +17,22 @@ class CartController extends Controller{
      * @since v1.0
      */
     public function actionIndex(){
+        if(isset($_SESSION['cart'])){
+            $cart = $_SESSION['cart'];
+            foreach($cart as $key => &$pro){
+                $pro['id']    = $key;
+                $pro['title'] = Product::model()->findbypk($key)->title;
+                $pro['cover'] = Product::model()->findbypk($key)->cover;
+            }
+        }else{
+            $cart = array();
+        }
 
-        $this->render('cartlist');
+        $data = array(
+            'cart'=>$cart
+        );
+
+        $this->render('cartlist',$data);
     }
 
     /*
@@ -30,21 +44,49 @@ class CartController extends Controller{
      * @since v1.0
      */
     public function actionAdd(){
-        if(!empty($_POST)){
-            $_POST['amount'] = $_POST['price']*$_POST['num'];
-            $_SESSION['cart'][] = $_POST;
-        }
-        if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1){
-            header('location:'.$this->createUrl('wechat/welogin'));
-            return ;
+        if(!empty($_POST)) {
+            if (isset($_SESSION['member']['islogin'])) {
+                $isLogin = $_SESSION['member']['islogin'];
+            } else {
+                $isLogin = 0;
+            }
+
+            if(!isset($_SESSION['cart'])){
+                $_SESSION['cart'] = array();
+            }else{
+                $sessionCart = $_SESSION['cart'];
+            }
+
+            $price      = $_POST['price'];
+            $num        = $_POST['num'];
+            $productid  = $_POST['productid'];
+            if(array_key_exists($productid,$sessionCart)){
+                $currentNum = $sessionCart[$productid]['num'];
+                $num += $currentNum;
+            }
+
+            //先加入session
+            $cart = array(
+                'productid' =>  $productid,
+                'price'     =>  $price,
+                'num'       =>  $num,
+                'amount'    =>  $price*$num,
+            );
+            $_SESSION['cart'][$productid] = $cart;
+
+            //如果已经登录,购物车加入数据库
+            if($isLogin) {
+                $model = new Cart;
+                $cart['memberid']   = $_SESSION['member']['memberid'];
+                $cart['createtime'] = time();
+                $model->attributes  = $cart;
+                $model->save(false);
+            }
         }else{
-            $_POST['createtime'] = time();
-            $_POST['memberid'] = $_SESSION['member']['id'];
-            $model = new Cart;
-            $model->attributes = $_POST;
-            $model->save(false);
+            //购物车无内容
+            $this->error('error_cart_add');
         }
 
-        header("location:".$this->createUrl('cart/index'));
+        $this->redirect($this->createUrl('cart/index'));
     }
 } 

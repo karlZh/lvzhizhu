@@ -21,19 +21,17 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-    public function error($errno='error_params',$errmsg='err_info',$data=false){
-        echo json_encode(
-            array(
-                'errno'=>constant('Constants::'.strtoupper($errno)),
-                'errmsg'=>$errmsg,
-                'data'=>$data
-            )
+    public function error($errno='error_params',$data=false) {
+        $errNo = strtoupper($errno);
+        $errorMsg = array(
+            'errno' => constant('Constants::'.$errNo),
+            'errmsg'=> Constants::$errMsg[$errNo],
+            'data'  => $data
         );
-        Yii::log(
-            $errmsg.":".json_encode($_REQUEST),
-            $errno
-        );
-        exit;
+        Yii::log($errmsg.":".json_encode($_REQUEST),$errno);
+        $this->viewPath = dirname($this->getViewPath());
+        $this->render('error',$errorMsg);
+        Yii::app()->end();
     }
 
 }

@@ -91,14 +91,7 @@
             <a class="com-header-search" id="js-com-header-search"><del></del></a>
             <a href="<?php echo $this->createUrl('member/index') ?>" class="com-header-user "><del></del></a>
             <i></i>
-            <?php
-                $cart = $_SESSION['cart'];
-                $cart_num = 0;
-                foreach($cart as $p){
-                    $cart_num += $p['num'];
-                }
-            ?>
-            <a href="<?php echo $this->createUrl('cart/index') ?>" class="com-header-cart "><b id="header-cart-num"><?php echo $cart_num; ?></b><del></del></a>
+            <a href="<?php echo $this->createUrl('cart/index') ?>" class="com-header-cart "><b id="header-cart-num">10</b><del></del></a>
         </p>
         <div class="clear"></div>
         <form action="" method="post">
