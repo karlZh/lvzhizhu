@@ -1,9 +1,8 @@
-function getCartNums()
+function getCartNums(url)
 {
-   var url = 'ajax@act=cartnum';
    $.ajax({url:url,type:'post',
 	  error:function(a){
-                    alert('链接服务器失败！');
+           alert('链接服务器失败！');
 	  },success:function(data){
 		   $('#header-cart-num').html(data.toString());
 	  }
@@ -90,7 +89,7 @@ $(document).ready(function(e) {
 	total();
 	$('#js-form').submit(function(){
                 var boo = false;
-                $('.goodlist li').each(function(){
+                $('.goodlist').each(function(){
 			if($(this).find('input:checked').length){
                                 boo = true;
                         }
@@ -100,7 +99,7 @@ $(document).ready(function(e) {
                     alert('请先勾选商品再提交结算！');
                     return false;
                 }
-		$('.goodlist li').each(function(){
+		$('.goodlist').each(function(){
 			if(!$(this).find('input:checked').length){
 				$(this).find('input,select').prop('disabled',true);
 			}
@@ -110,7 +109,7 @@ $(document).ready(function(e) {
 	});
         // 全部选择
         $('#js-all').click(function(){
-            $('.goodlist li').each(function(){
+            $('.goodlist').each(function(){
                 $(this).find('input[type="checkbox"]').prop('checked',true);
             });
             total();

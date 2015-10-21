@@ -17,6 +17,7 @@ class Constants {
 
     const ERROR_LOGIN       =   -50;
     const ERROR_CART_ADD    =   -51;
+    const ERROR_CART_DEL    =   -52;
 
     public static $errMsg = array(
         self::ERROR_OK          =>  'success',
@@ -28,6 +29,7 @@ class Constants {
         self::ERROR_ADMIN_LOGIN =>  '后台登录错误',
         self::ERROR_LOGIN       =>  '前台登录错误',
         self::ERROR_CART_ADD    =>  '购物车添加失败',
+        self::ERROR_CART_DEL    =>  '购物车删除失败',
     );
 
 }

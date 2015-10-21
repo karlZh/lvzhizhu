@@ -63,6 +63,7 @@
         });
     });
     </script>-->
+    <script src="<?php echo Yii::app()->request->baseUrl ?>/assets/home/js/cart/index.js"></script>
 </head>
 <body>
 
@@ -91,7 +92,7 @@
             <a class="com-header-search" id="js-com-header-search"><del></del></a>
             <a href="<?php echo $this->createUrl('member/index') ?>" class="com-header-user "><del></del></a>
             <i></i>
-            <a href="<?php echo $this->createUrl('cart/index') ?>" class="com-header-cart "><b id="header-cart-num">10</b><del></del></a>
+            <a href="<?php echo $this->createUrl('cart/index') ?>" class="com-header-cart "><b id="header-cart-num">0</b><del></del></a>
         </p>
         <div class="clear"></div>
         <form action="" method="post">
@@ -177,7 +178,7 @@
 
     ga('create', 'UA-45921315-2', 'greenspider.cn');
     ga('send', 'pageview');
-
+    getCartNums('<?php echo $this->createUrl('cart/getnum') ?>');
 </script>
 </body>
 </html>
