@@ -5952,3 +5952,231 @@ Stack trace:
 REQUEST_URI=/shop/index.php?r=receive/index
 HTTP_REFERER=http://localhost/shop/index.php?r=cart/index
 ---
+2015/10/22 10:04:40 [error] [php] Undefined index: cart (E:\wamp\www\shop\protected\controllers\CartController.php:133)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(286): CartController->runAction()
+#1 E:\wamp\www\shop\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CartController->run()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=cart/getnum
+in E:\wamp\www\shop\protected\controllers\CartController.php (133)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 10:04:45 [error] [php] Undefined index: cart (E:\wamp\www\shop\protected\controllers\CartController.php:133)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(286): CartController->runAction()
+#1 E:\wamp\www\shop\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CartController->run()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=cart/getnum
+in E:\wamp\www\shop\protected\controllers\CartController.php (133)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 10:04:52 [error] [php] Undefined index: cart (E:\wamp\www\shop\protected\controllers\CartController.php:133)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(286): CartController->runAction()
+#1 E:\wamp\www\shop\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CartController->run()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=cart/getnum
+in E:\wamp\www\shop\protected\controllers\CartController.php (133)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 10:42:20 [error] [php] Missing argument 1 for CHttpRequest::getParam(), called in E:\wamp\www\shop\protected\controllers\ReceiveController.php on line 9 and defined (E:\wamp\www\shop\framework\web\CHttpRequest.php:171)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 E:\wamp\www\shop\framework\web\CController.php(286): ReceiveController->runAction()
+#2 E:\wamp\www\shop\framework\web\CController.php(265): ReceiveController->runActionWithFilters()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(282): ReceiveController->run()
+#4 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=receive/index
+in E:\wamp\www\shop\protected\controllers\ReceiveController.php (9)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 11:19:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'postcode' at row 1. The SQL statement executed was: INSERT INTO `lzz_receive` (`receivepeople`, `receiveaddr`, `receivetel`, `email`, `postcode`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in E:\wamp\www\shop\protected\controllers\ReceiveController.php (26)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 11:19:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'postcode' at row 1. The SQL statement executed was: INSERT INTO `lzz_receive` (`receivepeople`, `receiveaddr`, `receivetel`, `email`, `postcode`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in E:\wamp\www\shop\framework\db\CDbCommand.php:358
+Stack trace:
+#0 E:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 E:\wamp\www\shop\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 E:\wamp\www\shop\protected\controllers\ReceiveController.php(26): CActiveRecord->save(false)
+#3 E:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ReceiveController->actionCreate()
+#4 E:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 E:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('create')
+#8 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/create')
+#9 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 E:\wamp\www\shop\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/shop/index.php?r=receive/create
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 11:32:57 [error] [php] Undefined index: HTTP_REFERER (E:\wamp\www\shop\protected\controllers\WechatController.php:25)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(286): WechatController->runAction()
+#1 E:\wamp\www\shop\framework\web\CController.php(265): WechatController->runActionWithFilters()
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(282): WechatController->run()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=wechat/welogin
+in E:\wamp\www\shop\protected\controllers\WechatController.php (25)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 14:18:11 [error] [php] Undefined index: memberid (E:\wamp\www\shop\protected\controllers\ReceiveController.php:66)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(286): ReceiveController->runAction()
+#1 E:\wamp\www\shop\framework\web\CController.php(265): ReceiveController->runActionWithFilters()
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(282): ReceiveController->run()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=receive/index
+in E:\wamp\www\shop\protected\controllers\ReceiveController.php (66)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 14:18:34 [error] [php] Undefined index: memberid (E:\wamp\www\shop\protected\controllers\ReceiveController.php:67)
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(286): ReceiveController->runAction()
+#1 E:\wamp\www\shop\framework\web\CController.php(265): ReceiveController->runActionWithFilters()
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(282): ReceiveController->run()
+#3 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=receive/index
+in E:\wamp\www\shop\protected\controllers\ReceiveController.php (67)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 14:19:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'memberid' in 'where clause'. The SQL statement executed was: SELECT * FROM `lzz_receive` `t` WHERE memberid=:id.
+in E:\wamp\www\shop\protected\controllers\ReceiveController.php (68)
+in E:\wamp\www\shop\index.php (13)
+2015/10/22 14:19:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'memberid' in 'where clause'. The SQL statement executed was: SELECT * FROM `lzz_receive` `t` WHERE memberid=:id' in E:\wamp\www\shop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 E:\wamp\www\shop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 E:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\wamp\www\shop\protected\controllers\ReceiveController.php(68): CActiveRecord->findAll('memberid=:id', Array)
+#4 E:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ReceiveController->actionIndex()
+#5 E:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 E:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 E:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#9 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/index')
+#10 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 E:\wamp\www\shop\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/shop/index.php?r=receive/index
+HTTP_REFERER=http://localhost/shop/index.php?r=cart/index
+---
+2015/10/22 14:36:56 [error] [exception.CException] exception 'CException' with message 'Property "Receive.potcode" is not defined.' in E:\wamp\www\shop\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\wamp\www\shop\framework\db\ar\CActiveRecord.php(145): CComponent->__get('potcode')
+#1 E:\wamp\www\shop\protected\views\receive\receivelist.php(26): CActiveRecord->__get('potcode')
+#2 E:\wamp\www\shop\framework\web\CBaseController.php(126): require('E:\\wamp\\www\\sho...')
+#3 E:\wamp\www\shop\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\wamp\\www\\sho...', Array, true)
+#4 E:\wamp\www\shop\framework\web\CController.php(869): CBaseController->renderFile('E:\\wamp\\www\\sho...', Array, true)
+#5 E:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('receivelist', Array, true)
+#6 E:\wamp\www\shop\protected\controllers\ReceiveController.php(75): CController->render('receivelist', Array)
+#7 E:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ReceiveController->actionIndex()
+#8 E:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#12 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/index')
+#13 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 E:\wamp\www\shop\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/shop/index.php?r=receive/index
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:37:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:52:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:52:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:52:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:55:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:57:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/22 14:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "choice".' in E:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 E:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('choice')
+#1 E:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('choice')
+#2 E:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/choice')
+#3 E:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=receive/choice
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---

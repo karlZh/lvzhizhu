@@ -2,11 +2,77 @@
     class ReceiveController extends Controller{
 
         public function actionCreate(){
+            $receivepeople = Yii::app()->request->getParam("receivepeople");
+            $receiveaddr = Yii::app()->request->getParam("receiveaddr");
+            $receivetel = Yii::app()->request->getParam("receivetel");
+            $email = Yii::app()->request->getParam("email");
+            $postcode = Yii::app()->request->getParam("postcode");
+
+            if(empty($receivepeople)||empty($receiveaddr)||empty($receivetel)||empty($postcode)){
+                $errorMsg = array(
+                    'errno'=>Constants::ERROR_PARAMS,
+                    'errmsg'=>Constants::$errMsg[Constants::ERROR_PARAMS],
+                    'data'=>false,
+                );
+                echo json_encode($errorMsg);
+            }else{
+                $model = new Receive;
+                $model->receivepeople = $receivepeople;
+                $model->receiveaddr = $receiveaddr;
+                $model->receivetel = $receivetel;
+                $model->email = $email;
+                $model->postcode = $postcode;
+                $model->memberid = $_SESSION['member']['memberid'];
+                $model->createtime = time();
+                if($model->save(false)){
+                    $data = array(
+                        'errno'=>0,
+                        'errmsg'=>'添加联系人成功',
+                        'data'=>array(
+                            'id'=>$model->getPrimaryKey(),
+                            'receivepeople'=>$receivepeople,
+                            'receiveaddr'=>$receiveaddr,
+                            'receivetel'=>$receivetel,
+                            'email'=>$email,
+                            'memberid'=>$_SESSION['member']['memberid'],
+                            'postcode'=>$postcode,
+                        ),
+                    );
+                    echo json_encode($data);
+                }else{
+                    $errorMsg = array(
+                        'errno'=>Constants::ERROR_INSERT,
+                        'errmsg'=>Constants::$errMsg[Constants::ERROR_INSERT],
+                        'data'=>false,
+                    );
+                    echo json_encode($errorMsg);
+                }
+            }
 
         }
 
         public function actionIndex(){
-            $this->render('receivelist');
+
+            $cart = Yii::app()->request->getParam('cart');
+            if(!empty($cart)){
+                $_SESSION['topay'] = $cart;
+            }
+
+            if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1){
+                //执行微信登录
+                //$this->redirect($this->createUrl('wechat/welogin'));
+                //Yii::app()->end();
+                $_SESSION['member']['islogin'] = 1;
+                $_SESSION['member']['memberid'] = 1;
+            }
+
+            $receives = Receive::model()->findAll('memberid=:id',array(':id'=>$_SESSION['member']['memberid']));
+
+            $data = array(
+                'receives'=>$receives,
+            );
+
+            $this->render('receivelist',$data);
         }
 
     }

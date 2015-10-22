@@ -22,14 +22,14 @@ class WechatController extends Controller{
             ."&redirect_uri=".urlencode("http://www.greenspider.cn".$this->createUrl('wechat/auth'))
             ."&response_type=code"
             ."&scope=snsapi_userinfo"
-            ."&state=".urlencode($_SERVER['HTTP_REFERER'])
+            ."&state="
             ."#wechat_redirect";
-        header("location:".$url);
+        $this->redirect($url);
     }
 
     public function actionAuth(){
-        $code = $_GET['code'];
-        $state = $_GET['state'];
+        $code = Yii::app()->request->getParam('code');
+        $state = Yii::app()->request->getParam('state');
         try {
             if (empty($code)) {
                 throw new Exception('授权失败,code错误');
@@ -60,17 +60,17 @@ class WechatController extends Controller{
                 $model->createtime = time();
                 $model->save(false);
                 $_SESSION['member'] = $userinfo;
-                $_SESSION['member']['id'] = $model->getPrimaryKey();
+                $_SESSION['member']['memberid'] = $model->getPrimaryKey();
                 $_SESSION['member']['islogin'] = 1;
             }
 
-            header("location:".$this->createUrl('cart/add'));
+            $this->redirect($this->createUrl('receive/index'));
 
         }catch(Exception $e){
             $this->error('error_params',$e->getMessage(),false);
             echo "<script>";
             echo "alert('授权失败，请重新登录');";
-            echo "window.location.href='".$state."'";
+            echo "window.location.href='".$this->createUrl('index/index')."'";
             echo "</script>";
             return ;
         }

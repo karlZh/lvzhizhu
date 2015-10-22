@@ -39,12 +39,12 @@
     <a href="" class="title" style="height:auto;padding-top: 18px;">商品名称：&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $pro['title'] ?></a>
     <p style="height:30px;margin-top:5px">
         <span class="pxui-color-grey">商品单价：</span>
+
         <span class="pxui-color-red">&nbsp;<span><?php echo $pro['price'] ?></span> 元</span>
     </p>
     <p style="height:30px">
         <span class="pxui-color-grey">购买数量：</span>
-        <input type="number" class="num" style="width:40px;height:20px;font-size:8px;padding:0;padding-left: 10px" value="<?php echo $pro['num'] ?>">
-        <input type="hidden" name="num[<?php echo $pro['id'] ?>]" value="<?php echo $pro['num'] ?>">
+        <input type="number" name="cart[<?php echo $pro['id'] ?>][num]" class="num" style="width:40px;height:20px;font-size:8px;padding:0;padding-left: 10px" value="<?php echo $pro['num'] ?>" disabled=true>
         <span class="pxui-color-red" id="total">(总计 : <span class="pt"><?php echo sprintf("%.2f",$pro['amount']) ?></span>元)</span>
     </p>
     <div class="close" data-value="<?php echo $pro['id'] ?>" style="font-size:20px;position:absolute;right:5px;top:2px;color:white;border-color:grey;background-color:#fb4e3a;width:22px;height:22px;line-height:19px;text-align:center;-webkit-transform:rotate(45deg);
@@ -53,7 +53,9 @@ transform:rotate(45deg);-moz-border-radius: 15px;-webkit-border-radius: 15px;bor
         +
     </div>
     <div class="check" data-value="<?php echo $pro['id'] ?>" style="position:absolute;left:5px;top:6px;">
-        <input type="checkbox" name="product[]" value="<?php echo $pro['id'] ?>" style="width:15px;height:15px">
+        <input type="checkbox" class="chk" value="<?php echo $pro['id'] ?>" style="width:15px;height:15px">
+        <input type="hidden" name="cart[<?php echo $pro['id'] ?>][productid]" value="<?php echo $pro['id'] ?>" disabled=true>
+        <input type="hidden" name="cart[<?php echo $pro['id'] ?>][price]" value="<?php echo $pro['price'] ?>" disabled=true>
     </div>
 </div>
             <?php
@@ -110,5 +112,27 @@ transform:rotate(45deg);-moz-border-radius: 15px;-webkit-border-radius: 15px;bor
                 alert(data.errmsg);
             }
         },'json');
+    });
+
+    $("#js-all").click(function(){
+        $(".chk").each(function(i){
+            $(".chk").eq(i).next('input').attr('disabled',false);
+            $(".chk").eq(i).next('input').next('input').attr('disabled',false);
+            $(".chk").eq(i).parent().prev().prev().find('input').attr('disabled',false);
+        });
+    });
+
+    $(".chk").click(function(){
+        $(this).next('input').attr('disabled',false);
+        $(this).next('input').next('input').attr('disabled',false);
+        $(this).parent().prev().prev().find('input').attr('disabled',false);
+    });
+
+    $(".chk").each(function(i){
+        if($(".chk").eq(i).attr('checked')) {
+            $(".chk").eq(i).next('input').attr('disabled', false);
+            $(".chk").eq(i).next('input').next('input').attr('disabled', false);
+            $(".chk").eq(i).parent().prev().prev().find('input').attr('disabled', false);
+        }
     });
 </script>

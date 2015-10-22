@@ -130,7 +130,12 @@ class CartController extends Controller{
     }
 
     public function actionGetNum(){
-        echo count($_SESSION['cart']);
+        if(isset($_SESSION['cart'])){
+            echo count($_SESSION['cart']);
+        }else{
+            echo 0;
+        }
+
     }
 
 } 
