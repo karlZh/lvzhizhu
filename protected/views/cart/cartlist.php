@@ -31,7 +31,7 @@
             <?php
                 foreach($cart as $pro):
             ?>
-<div class="tuan-list" style="position:relative">
+<div class="tuan-list" style="position:relative;height:140px">
     <div class="img120" style="margin-left:30px">
         <a href=""><dfn></dfn><img src="<?php echo Yii::app()->request->baseUrl ?>/assets/uploads/products/<?php echo $pro['id'].'/'.$pro['cover'] ?>"/>
         </a>
@@ -39,13 +39,12 @@
     <a href="" class="title" style="height:auto;padding-top: 18px;">商品名称：&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $pro['title'] ?></a>
     <p style="height:30px;margin-top:5px">
         <span class="pxui-color-grey">商品单价：</span>
-
         <span class="pxui-color-red">&nbsp;<span><?php echo $pro['price'] ?></span> 元</span>
     </p>
     <p style="height:30px">
         <span class="pxui-color-grey">购买数量：</span>
-        <input type="number" name="cart[<?php echo $pro['id'] ?>][num]" class="num" style="width:40px;height:20px;font-size:8px;padding:0;padding-left: 10px" value="<?php echo $pro['num'] ?>" disabled=true>
-        <span class="pxui-color-red" id="total">(总计 : <span class="pt"><?php echo sprintf("%.2f",$pro['amount']) ?></span>元)</span>
+        <input type="number" name="cart[<?php echo $pro['id'] ?>][num]" class="num" style="width:40px;height:20px;font-size:13px;padding:0;padding-left: 10px" value="<?php echo $pro['num'] ?>" disabled=true>
+        <span class="pxui-color-red" id="total"><span class="pt"><?php echo sprintf("%.2f",$pro['amount']) ?></span>元</span>
     </p>
     <div class="close" data-value="<?php echo $pro['id'] ?>" style="font-size:20px;position:absolute;right:5px;top:2px;color:white;border-color:grey;background-color:#fb4e3a;width:22px;height:22px;line-height:19px;text-align:center;-webkit-transform:rotate(45deg);
 -moz-transform:rotate(45deg);
@@ -78,10 +77,9 @@ transform:rotate(45deg);-moz-border-radius: 15px;-webkit-border-radius: 15px;bor
         if($(this).val()<1){
             $(this).val("1");
         }
-        $(this).next("input").val($(this).val());
         var price = parseFloat($(this).parent().prev("p").find("span").eq(1).find("span").html());
         var total = parseInt($(this).val())*price;
-        $(this).next("input").next("span").find("span").html(parseFloat(total).toFixed(2));
+        $(this).next("span").find("span").html(parseFloat(total).toFixed(2));
         var amount = 0.00;
         $(".pt").each(function(i){
             amount += parseFloat($(".pt").eq(i).html());

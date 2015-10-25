@@ -22,7 +22,7 @@
                 $model->receivetel = $receivetel;
                 $model->email = $email;
                 $model->postcode = $postcode;
-                $model->memberid = $_SESSION['member']['memberid'];
+                $model->memberid = $_SESSION['member']['id'];
                 $model->createtime = time();
                 if($model->save(false)){
                     $data = array(
@@ -34,7 +34,7 @@
                             'receiveaddr'=>$receiveaddr,
                             'receivetel'=>$receivetel,
                             'email'=>$email,
-                            'memberid'=>$_SESSION['member']['memberid'],
+                            'memberid'=>$_SESSION['member']['id'],
                             'postcode'=>$postcode,
                         ),
                     );
@@ -58,15 +58,15 @@
                 $_SESSION['topay'] = $cart;
             }
 
-            if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1){
+            if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1 || empty($_SESSION['member']['id'])){
                 //执行微信登录
-                //$this->redirect($this->createUrl('wechat/welogin'));
-                //Yii::app()->end();
-                $_SESSION['member']['islogin'] = 1;
-                $_SESSION['member']['memberid'] = 1;
+                $this->redirect($this->createUrl('wechat/welogin'));
+                Yii::app()->end();
+                //$_SESSION['member']['islogin'] = 1;
+                //$_SESSION['member']['memberid'] = 1;
             }
 
-            $receives = Receive::model()->findAll('memberid=:id',array(':id'=>$_SESSION['member']['memberid']));
+            $receives = Receive::model()->findAll('memberid=:id',array(':id'=>$_SESSION['member']['id']));
 
             $data = array(
                 'receives'=>$receives,

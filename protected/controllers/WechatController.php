@@ -8,6 +8,8 @@
 
 class WechatController extends Controller{
 
+    const TOKEN = "lvzhizhushop123";
+
     /*
      * actionWeLogin
      * 微信登录操作
@@ -53,14 +55,16 @@ class WechatController extends Controller{
 
             $model = new Member();
             $data = $model->find('openid=:id',array(':id'=>$openid));
+
             if($data){
                 $_SESSION['member'] = $data->attributes;
+                $_SESSION['member']['islogin'] = 1;
             }else {
                 $model->attributes = $userinfo;
                 $model->createtime = time();
                 $model->save(false);
                 $_SESSION['member'] = $userinfo;
-                $_SESSION['member']['memberid'] = $model->getPrimaryKey();
+                $_SESSION['member']['id'] = $model->getPrimaryKey();
                 $_SESSION['member']['islogin'] = 1;
             }
 
@@ -76,6 +80,18 @@ class WechatController extends Controller{
         }
 
 
+    }
+
+    public function actionAuth(){
+        $signature = Yii::app()->request->getParam('signature');
+        $timestamp = Yii::app()->request->getParam('timestamp');
+        $nonce = Yii::app()->request->getParam('nonce');
+        $echostr = Yii::app()->request->getParam('echostr');
+        $arr = array($timestamp,$nonce,self::TOKEN);
+        sort($arr);
+        if($signature == sha1(join($arr))){
+            echo $echostr;
+        }
     }
 
 } 

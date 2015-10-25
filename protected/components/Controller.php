@@ -21,6 +21,15 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
+    public function validateParams(array $params){
+        foreach($params as $pname => $pval){
+            if(empty($pval)){
+                $this->error('error_params','缺少 '.$pname.' 参数',false);
+                Yii::app()->end();
+            }
+        }
+    }
+
     public function error($errno='error_params',$errmsg='err_info',$data=false){
         echo json_encode(
             array(

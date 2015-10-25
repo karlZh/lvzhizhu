@@ -6180,3 +6180,275 @@ Stack trace:
 REQUEST_URI=/shop/index.php?r=receive/choice
 HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
 ---
+2015/10/24 22:29:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in F:\wamp\www\shop\framework\db\CDbConnection.php:399
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 F:\wamp\www\shop\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 F:\wamp\www\shop\framework\base\CModule.php(394): CDbConnection->init()
+#3 F:\wamp\www\shop\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1433): CActiveRecord->getDbConnection()
+#6 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1489): CActiveRecord->getTableAlias(true)
+#7 F:\wamp\www\shop\protected\controllers\ProductController.php(59): CActiveRecord->findByPk('9')
+#8 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ProductController->actionDetail()
+#9 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('detail')
+#13 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('product/detail')
+#14 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\wamp\www\shop\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shop/index.php?r=product/detail&productid=9
+---
+2015/10/25 16:53:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2000] mysqlnd cannot connect to MySQL 4.1+ using the old insecure authentication. Please use an administration tool to reset your password with the command SET PASSWORD = PASSWORD('your_existing_password'). This will store a new, and more secure, hash value in mysql.user. If this user is used in other scripts executed by PHP 5.2 or earlier you might need to remove the old-passwords flag from your my.cnf file' in F:\wamp\www\shop\framework\db\CDbConnection.php:399
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 F:\wamp\www\shop\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 F:\wamp\www\shop\framework\base\CModule.php(394): CDbConnection->init()
+#3 F:\wamp\www\shop\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(670): CActiveRecord->getDbConnection()
+#6 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1474): CActiveRecord->getCommandBuilder()
+#7 F:\wamp\www\shop\protected\controllers\IndexController.php(21): CActiveRecord->findAll('pid=0')
+#8 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#9 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('')
+#13 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\wamp\www\shop\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shop/index.php
+HTTP_REFERER=http://localhost/shop/
+---
+2015/10/25 16:54:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in F:\wamp\www\shop\framework\db\CDbConnection.php:399
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 F:\wamp\www\shop\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 F:\wamp\www\shop\framework\base\CModule.php(394): CDbConnection->init()
+#3 F:\wamp\www\shop\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(670): CActiveRecord->getDbConnection()
+#6 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1474): CActiveRecord->getCommandBuilder()
+#7 F:\wamp\www\shop\protected\controllers\IndexController.php(21): CActiveRecord->findAll('pid=0')
+#8 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#9 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('')
+#13 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\wamp\www\shop\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shop/index.php
+HTTP_REFERER=http://localhost/shop/
+---
+2015/10/25 16:55:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in F:\wamp\www\shop\framework\db\CDbConnection.php:399
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 F:\wamp\www\shop\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 F:\wamp\www\shop\framework\base\CModule.php(394): CDbConnection->init()
+#3 F:\wamp\www\shop\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(670): CActiveRecord->getDbConnection()
+#6 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1474): CActiveRecord->getCommandBuilder()
+#7 F:\wamp\www\shop\protected\controllers\IndexController.php(21): CActiveRecord->findAll('pid=0')
+#8 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#9 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('')
+#13 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\wamp\www\shop\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shop/index.php
+HTTP_REFERER=http://localhost/shop/
+---
+2015/10/25 16:55:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'lvzhizhu'' in F:\wamp\www\shop\framework\db\CDbConnection.php:399
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 F:\wamp\www\shop\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 F:\wamp\www\shop\framework\base\CModule.php(394): CDbConnection->init()
+#3 F:\wamp\www\shop\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(670): CActiveRecord->getDbConnection()
+#6 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1474): CActiveRecord->getCommandBuilder()
+#7 F:\wamp\www\shop\protected\controllers\IndexController.php(21): CActiveRecord->findAll('pid=0')
+#8 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#9 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('')
+#13 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\wamp\www\shop\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shop/index.php
+HTTP_REFERER=http://localhost/shop/
+---
+2015/10/25 17:27:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'memberid' in 'where clause'. The SQL statement executed was: SELECT * FROM `lzz_receive` `t` WHERE memberid=:id.
+in F:\wamp\www\shop\protected\controllers\ReceiveController.php (69)
+in F:\wamp\www\shop\index.php (13)
+2015/10/25 17:27:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'memberid' in 'where clause'. The SQL statement executed was: SELECT * FROM `lzz_receive` `t` WHERE memberid=:id' in F:\wamp\www\shop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 F:\wamp\www\shop\protected\controllers\ReceiveController.php(69): CActiveRecord->findAll('memberid=:id', Array)
+#4 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ReceiveController->actionIndex()
+#5 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#9 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/index')
+#10 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 F:\wamp\www\shop\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/shop/index.php?r=receive/index
+HTTP_REFERER=http://localhost/shop/index.php?r=cart/index
+---
+2015/10/25 17:44:19 [error] [exception.CException] exception 'CException' with message 'Property "Order.productid" is not defined.' in F:\wamp\www\shop\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(145): CComponent->__get('productid')
+#1 F:\wamp\www\shop\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('productid')
+#2 F:\wamp\www\shop\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Order), 'productid')
+#3 F:\wamp\www\shop\framework\base\CModel.php(159): CValidator->validate(Object(Order), NULL)
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#5 F:\wamp\www\shop\protected\controllers\OrderController.php(30): CActiveRecord->save()
+#6 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): OrderController->actionCreate()
+#7 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('create')
+#11 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/create')
+#12 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 F:\wamp\www\shop\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/shop/index.php?r=order/create
+---
+2015/10/25 17:45:55 [error] [exception.CException] exception 'CException' with message 'Property "Order.num" is not defined.' in F:\wamp\www\shop\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(145): CComponent->__get('num')
+#1 F:\wamp\www\shop\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('num')
+#2 F:\wamp\www\shop\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Order), 'num')
+#3 F:\wamp\www\shop\framework\base\CModel.php(159): CValidator->validate(Object(Order), NULL)
+#4 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#5 F:\wamp\www\shop\protected\controllers\OrderController.php(30): CActiveRecord->save()
+#6 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): OrderController->actionCreate()
+#7 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('create')
+#11 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/create')
+#12 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 F:\wamp\www\shop\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/shop/index.php?r=order/create
+---
+2015/10/25 17:54:31 [error] [exception.CException] exception 'CException' with message 'Property "OrderDetail.orderid" is not defined.' in F:\wamp\www\shop\framework\base\CComponent.php:173
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(161): CComponent->__set('orderid', '3')
+#1 F:\wamp\www\shop\protected\controllers\OrderController.php(35): CActiveRecord->__set('orderid', '3')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): OrderController->actionCreate()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('create')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/create')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=order/create
+---
+2015/10/25 21:36:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'postcode' at row 1. The SQL statement executed was: INSERT INTO `lzz_receive` (`receivepeople`, `receiveaddr`, `receivetel`, `email`, `postcode`, `memberid`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in F:\wamp\www\shop\protected\controllers\ReceiveController.php (27)
+in F:\wamp\www\shop\index.php (13)
+2015/10/25 21:36:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'postcode' at row 1. The SQL statement executed was: INSERT INTO `lzz_receive` (`receivepeople`, `receiveaddr`, `receivetel`, `email`, `postcode`, `memberid`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in F:\wamp\www\shop\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 F:\wamp\www\shop\protected\controllers\ReceiveController.php(27): CActiveRecord->save(false)
+#3 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ReceiveController->actionCreate()
+#4 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('create')
+#8 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('receive/create')
+#9 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\wamp\www\shop\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/shop/index.php?r=receive/create
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/25 22:00:12 [error] [php] Missing argument 1 for CController::createUrl(), called in F:\wamp\www\shop\protected\views\receive\receivelist.php on line 157 and defined (F:\wamp\www\shop\framework\web\CController.php:959)
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CBaseController.php(95): ReceiveController->renderInternal()
+#1 F:\wamp\www\shop\framework\web\CController.php(869): ReceiveController->renderFile()
+#2 F:\wamp\www\shop\framework\web\CController.php(782): ReceiveController->renderPartial()
+#3 F:\wamp\www\shop\protected\controllers\ReceiveController.php(75): ReceiveController->render()
+#4 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ReceiveController->actionIndex()
+#5 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 F:\wamp\www\shop\framework\web\CController.php(286): ReceiveController->runAction()
+#7 F:\wamp\www\shop\framework\web\CController.php(265): ReceiveController->runActionWithFilters()
+#8 F:\wamp\www\shop\framework\web\CWebApplication.php(282): ReceiveController->run()
+#9 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 F:\wamp\www\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/index.php?r=receive/index
+in F:\wamp\www\shop\protected\views\receive\receivelist.php (157)
+in F:\wamp\www\shop\protected\controllers\ReceiveController.php (75)
+in F:\wamp\www\shop\index.php (13)
+2015/10/25 22:16:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('show')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('show')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/show')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=order/show&orderid=5
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/10/25 22:41:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '测试商品11' for key 'title'. The SQL statement executed was: INSERT INTO `lzz_product` (`title`, `describe`, `price`, `originalprice`, `inventory`, `categoryid`, `brandid`, `adminid`, `ishot`, `isputaway`, `isonsale`, `onsaleprice`, `cover`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13).
+in F:\wamp\www\shop\protected\modules\admin\controllers\ProductController.php (24)
+in F:\wamp\www\shop\index.php (13)
+2015/10/25 22:41:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '测试商品11' for key 'title'. The SQL statement executed was: INSERT INTO `lzz_product` (`title`, `describe`, `price`, `originalprice`, `inventory`, `categoryid`, `brandid`, `adminid`, `ishot`, `isputaway`, `isonsale`, `onsaleprice`, `cover`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13)' in F:\wamp\www\shop\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 F:\wamp\www\shop\protected\modules\admin\controllers\ProductController.php(24): CActiveRecord->save(false)
+#3 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): ProductController->actionAdd()
+#4 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('add')
+#8 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/product/a...')
+#9 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\wamp\www\shop\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/shop/index.php?r=admin/product/add
+HTTP_REFERER=http://localhost/shop/index.php?r=admin/product/add
+---
+2015/10/26 01:16:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('test')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('test')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/test')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=order/test
+---
+2015/10/26 01:16:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('test')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('test')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/test')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=order/test
+---
