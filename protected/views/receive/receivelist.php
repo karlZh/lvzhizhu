@@ -107,7 +107,7 @@
             </p>
         </div>
     </form>
-    <input type="button" id="js-choice" value="   去 支 付   " class="pxui-light-button" style="width:100%"/>
+    <input type="button" id="js-choice" value="   去 支 付   " class="pxui-light-button" style="width:100%;-webkit-appearance: none;"/>
 </div>
 
 <!--content-end-->
@@ -192,6 +192,9 @@
                 },function(res) {
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
                         alert('支付成功');
+                    } else {
+                        alert('支付失败');
+                        $("#js-choice").val('去 支 付').attr('disabled',false);
                     }
                 })
             }else{

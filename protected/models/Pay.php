@@ -24,12 +24,13 @@ class Pay{
             'body'          =>      $body,
             'attach'        =>      $attach,
             'out_trade_no'  =>      $orderid,
-            'total_fee'     =>      $amount,
+            'total_fee'     =>      $amount*100,
             'spbill_create_ip'=>    $_SERVER['REMOTE_ADDR']=="::1"?'127.0.0.1':$_SERVER['REMOTE_ADDR'],
             'notify_url'    =>      $notify_url,
             'trade_type'    =>      $trade_type,
             'openid'        =>      $openid,
         );
+
         $params = array_filter($params);
         $sign = self::mkSign($params);
         $params['sign'] = $sign;

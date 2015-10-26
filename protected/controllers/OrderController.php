@@ -61,11 +61,8 @@
                     $orderDetailModel->save();
                 }
                 $notify_url = "http://www.greenspider.cn/weshop/index.php?r=order/notify";
-
                 $xmlData = Pay::UNIPay($orderid,'绿蜘蛛电子商品',$amount,$notify_url,'JSAPI',$_SESSION['member']['openid']);
-
                 $xmlObj = simplexml_load_string($xmlData,'SimpleXMLElement');
-
                 $prepay_id = "prepay_id=".$xmlObj->prepay_id;
                 $data = array(
                     'appId'     =>  Pay::APPID,

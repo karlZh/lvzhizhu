@@ -8,7 +8,7 @@
 
 class WechatController extends Controller{
 
-    const TOKEN = "lvzhizhushop123";
+    const TOKEN = "lvzhizhushop";
 
     /*
      * actionWeLogin
@@ -82,7 +82,8 @@ class WechatController extends Controller{
 
     }
 
-    public function actionAuth(){
+    public function actionInterface(){
+
         $signature = Yii::app()->request->getParam('signature');
         $timestamp = Yii::app()->request->getParam('timestamp');
         $nonce = Yii::app()->request->getParam('nonce');
@@ -92,6 +93,7 @@ class WechatController extends Controller{
         if($signature == sha1(join($arr))){
             echo $echostr;
         }
+
     }
 
 } 

@@ -58,6 +58,10 @@
                 $_SESSION['topay'] = $cart;
             }
 
+            $_SESSION['member']['islogin'] = 1;
+            $_SESSION['member']['openid'] = 4;
+            $_SESSION['member']['openid'] = 'o2ibWwbbB7IwjUrXoE7W3Gx9tPak';
+
             if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1 || empty($_SESSION['member']['id'])){
                 //执行微信登录
                 $this->redirect($this->createUrl('wechat/welogin'));

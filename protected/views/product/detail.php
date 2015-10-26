@@ -142,7 +142,7 @@
     </li>
     <!--size-message-end-->
 </ul>
-<input type="submit" class="pxui-light-button" value="加入购物车" />
+<input type="submit" class="pxui-light-button" value="加入购物车" style="-webkit-appearance: none;" />
 </form>
 <h3 id="js-attrs-title">商品属性</h3>
 <ul class="attrs">

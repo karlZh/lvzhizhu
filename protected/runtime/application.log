@@ -6452,3 +6452,33 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/shop/index.php?r=order/test
 ---
+2015/10/26 21:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('test')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('test')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/test')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=order/test
+---
+2015/10/26 22:37:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'productnum' at row 1. The SQL statement executed was: INSERT INTO `lzz_order` (`paytypeid`, `place_order_uid`, `receiveid`, `amount`, `status`, `productnum`, `expressno`, `expresstypeid`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in F:\wamp\www\shop\protected\controllers\OrderController.php (47)
+in F:\wamp\www\shop\index.php (13)
+2015/10/26 22:37:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'productnum' at row 1. The SQL statement executed was: INSERT INTO `lzz_order` (`paytypeid`, `place_order_uid`, `receiveid`, `amount`, `status`, `productnum`, `expressno`, `expresstypeid`, `createtime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in F:\wamp\www\shop\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 F:\wamp\www\shop\protected\controllers\OrderController.php(47): CActiveRecord->save()
+#3 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): OrderController->actionCreate()
+#4 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('create')
+#8 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/create')
+#9 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\wamp\www\shop\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/shop/index.php?r=order/create
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---

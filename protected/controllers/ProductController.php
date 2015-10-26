@@ -52,10 +52,11 @@ class ProductController extends Controller{
      * @since v1.0
      */
     public function actionDetail(){
-        $id = $_GET['productid'];
-        if(empty($id)){
-            $this->error('error_params','productid参数为空',false);
-        }
+        $id = Yii::app()->request->getParam('productid');
+        $params = array(
+            'productid'=>$id,
+        );
+        $this->validateParams($params);
         $product = Product::model()->findbypk($id);
         $brand = Brand::model()->findbypk($product->brandid);
         if(!empty($brand)){
@@ -65,9 +66,8 @@ class ProductController extends Controller{
         }
 
         $properties = ProductProperty::model()->findAll('productid=:pid',array(':pid'=>$id));
-
         foreach($properties as $property){
-            $property->propertyname = Property::model()->findbypk($property->id)->fieldname;
+            $property->propertyname = Property::model()->findbypk($property->propertyid)->fieldname;
         }
 
         $data = array(
