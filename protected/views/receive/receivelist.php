@@ -192,7 +192,10 @@
                 },function(res) {
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
                         alert('支付成功');
-                    } else {
+					} else if(res.err_msg == 'get_brand_wcpay_request:cancel') {
+						alert('您取消了支付');
+                        $("#js-choice").val('去 支 付').attr('disabled',false);
+					}else{
                         alert('支付失败');
                         $("#js-choice").val('去 支 付').attr('disabled',false);
                     }
