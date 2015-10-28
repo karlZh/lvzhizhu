@@ -5,6 +5,7 @@
             $receiveid = Yii::app()->request->getParam('receiveid');
             $paytypeid = Yii::app()->request->getParam('paytypeid');
             $expresstypeid = Yii::app()->request->getParam('expresstypeid');
+
             $topay = $_SESSION['topay'];
             $place_order_uid = $_SESSION['member']['id'];
             $expressno = "000001";//test
@@ -74,16 +75,20 @@
                 $paySign = Pay::mkSign($data);
                 $data['paySign'] = $paySign;
                 $data['orderid'] = $orderid;
+                foreach($topay as $key=>$val){
+                    unset($_SESSION['cart'][$key]);
+                }
+                $_SESSION['topay'] = array();
                 $this->error('error_ok','下单成功',$data);
-
             }else{
                 $this->error('error_order_create','创建订单失败',false);
             }
 
         }
 
-        private function _toPay(){
-
+        public function actionList(){
+            $this->render('orderlist');
         }
+
 
     }

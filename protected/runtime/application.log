@@ -6482,3 +6482,18 @@ Stack trace:
 REQUEST_URI=/shop/index.php?r=order/create
 HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
 ---
+2015/10/28 23:50:35 [error] [exception.CException] exception 'CException' with message 'OrderController cannot find the requested view "orderlist".' in F:\wamp\www\shop\framework\web\CController.php:878
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(782): CController->renderPartial('orderlist', NULL, true)
+#1 F:\wamp\www\shop\protected\controllers\OrderController.php(90): CController->render('orderlist')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): OrderController->actionList()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('list')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('order/list')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=order/list
+---

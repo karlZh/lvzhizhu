@@ -17,9 +17,9 @@ class CartController extends Controller{
      * @since v1.0
      */
     public function actionIndex(){
+        $amount = 0.00;
         if(isset($_SESSION['cart'])){
             $cart = $_SESSION['cart'];
-            $amount = 0.00;
             foreach($cart as $key => &$pro){
                 $pro['id']    = $key;
                 $pro['title'] = Product::model()->findbypk($key)->title;

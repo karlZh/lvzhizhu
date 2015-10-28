@@ -58,6 +58,10 @@
                 $_SESSION['topay'] = $cart;
             }
 
+            if( empty($cart) ){
+                $this->redirect($this->createUrl('cart/index'));
+            }
+
             $_SESSION['member']['islogin'] = 1;
             $_SESSION['member']['openid'] = 4;
             $_SESSION['member']['openid'] = 'o2ibWwbbB7IwjUrXoE7W3Gx9tPak';
@@ -66,8 +70,6 @@
                 //执行微信登录
                 $this->redirect($this->createUrl('wechat/welogin'));
                 Yii::app()->end();
-                //$_SESSION['member']['islogin'] = 1;
-                //$_SESSION['member']['memberid'] = 1;
             }
 
             $receives = Receive::model()->findAll('memberid=:id',array(':id'=>$_SESSION['member']['id']));

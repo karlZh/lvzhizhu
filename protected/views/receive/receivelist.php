@@ -191,7 +191,7 @@
                     "paySign" : d.data.paySign //微信签名
                 },function(res) {
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
-                        alert('支付成功');
+                        alert('支付成功');window.location.href='<?php echo $this->createUrl("order/list") ?>';
 					} else if(res.err_msg == 'get_brand_wcpay_request:cancel') {
 						alert('您取消了支付');
                         $("#js-choice").val('去 支 付').attr('disabled',false);
@@ -199,7 +199,9 @@
                         alert('支付失败');
                         $("#js-choice").val('去 支 付').attr('disabled',false);
                     }
+                    window.location.href='<?php echo $this->createUrl("order/list") ?>';
                 })
+
             }else{
                 alert(d.errmsg);
                 window.location.reload();
