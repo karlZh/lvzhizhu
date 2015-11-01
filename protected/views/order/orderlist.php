@@ -10,39 +10,25 @@
 <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl ?>/assets/home/css/tuan/tuan.css"/>
 <div class="page-role">
 <div class="page-title"><a class="return" href="javascript:history.back();void(0)">返 回</a>我的订单</div>
+    <?php foreach($orderlist as $order): ?>
     <div class="pxui-tab" style="padding:0 15px;margin-bottom: 2px;border:none;border-radius:0">
-        <div style="float:left" class="orderno"><span>▼</span> 订单号：1401011111111</div>
-        <div style="float:right">待付款</div>
+        <div style="float:left" class="orderno"><span>▼</span> 订单号：<?php echo $order->id ?></div>
+        <div style="float:right"><?php echo $order->step; ?></div>
     </div>
     <div class="js-goodlist">
-
+        <?php foreach($order->products as $product): ?>
         <div class="tuan-list" style="margin-bottom: 0px">
             <div class="img120">
-
-                <a href=""><dfn></dfn><img src="http://img2.paishoes.com/kshida/kaishida/201311/15/5983e5d584_thumb_120120.jpg"/>
+                <a href=""><dfn></dfn><img src="<?php echo Yii::app()->request->baseUrl .'/assets/uploads/products/'.$product['productId'].'/'.$product['productPic'] ?>"/>
                 </a>
             </div>
-            <a href=""  class="title">【凯仕达】 男士运动T恤短袖吸湿排汗圆领休闲运动T恤</a>
+            <a href=""  class="title"><?php echo $product['productName'] ?></a>
             <p>
-                <span class="pxui-color-red">￥29.00</span>
-                <del class="pxui-color-gray">￥139.00</del>
-                <span class="pxui-color-yellow"><span class="red">265</span>人</span>
+                <span class="pxui-color-red">￥<?php echo $product['productPrice'] ?> 元</span>
+                <span class="pxui-color-yellow"><span class="red"><?php echo $product['productNum'] ?></span>件</span>
             </p>
         </div>
-        <div class="tuan-list" style="margin-bottom: 0px">
-            <div class="img120">
-
-                <a href=""><dfn></dfn><img src="http://img6.paixie.net/originals/201403/10/G84555_491_p_thumb_120120.jpg"/>
-                </a>
-            </div>
-            <a href=""  class="title">【全国包邮】全网最低价！冠希同款仅139元即可抢购专柜正品阿迪达斯2014夏季新款男士...</a>
-
-            <p>
-                <span class="pxui-color-red">￥139.00</span>
-                <del class="pxui-color-gray">￥249.00</del>
-                <span class="pxui-color-yellow"><span class="red">213</span>人</span>
-            </p>
-        </div>
+        <?php endforeach; ?>
 
         <div style="height:45px;background:white;text-align:right">
             <input type="button" value="去支付" style="height:30px;line-height:10px;"/>
@@ -52,125 +38,7 @@
     </div>
 
     <div style="height:10px"></div>
-    <div class="pxui-tab" style="padding:0 15px;margin-bottom: 2px;border:none;border-radius:0">
-        <div style="float:left" class="orderno"><span>▼</span> 订单号：1401011111111</div>
-        <div style="float:right">待付款</div>
-    </div>
-    <div class="js-goodlist">
-
-        <div class="tuan-list" style="margin-bottom: 0px">
-            <div class="img120">
-
-                <a href=""><dfn></dfn><img src="http://img2.paishoes.com/kshida/kaishida/201311/15/5983e5d584_thumb_120120.jpg"/>
-                </a>
-            </div>
-            <a href=""  class="title">【凯仕达】 男士运动T恤短袖吸湿排汗圆领休闲运动T恤</a>
-            <p>
-                <span class="pxui-color-red">￥29.00</span>
-                <del class="pxui-color-gray">￥139.00</del>
-                <span class="pxui-color-yellow"><span class="red">265</span>人</span>
-            </p>
-        </div>
-        <div class="tuan-list" style="margin-bottom: 0px">
-            <div class="img120">
-
-                <a href=""><dfn></dfn><img src="http://img6.paixie.net/originals/201403/10/G84555_491_p_thumb_120120.jpg"/>
-                </a>
-            </div>
-            <a href=""  class="title">【全国包邮】全网最低价！冠希同款仅139元即可抢购专柜正品阿迪达斯2014夏季新款男士...</a>
-            <p>
-                <span class="pxui-color-red">￥139.00</span>
-                <del class="pxui-color-gray">￥249.00</del>
-                <span class="pxui-color-yellow"><span class="red">213</span>人</span>
-            </p>
-        </div>
-
-        <div style="height:45px;background:white;text-align:right">
-            <input type="button" value="去支付" style="height:30px;line-height:10px;"/>
-            <input type="button" value="取消订单" style="height:30px;line-height:10px;"/>
-        </div>
-
-
-    </div>
-
-    <div style="height:10px"></div>
-    <div class="pxui-tab" style="padding:0 15px;margin-bottom: 2px;border:none;border-radius:0">
-        <div style="float:left" class="orderno"><span>▼</span> 订单号：1401011111111</div>
-        <div style="float:right">已发货</div>
-    </div>
-    <div class="js-goodlist">
-
-        <div class="tuan-list" style="margin-bottom: 0px">
-            <div class="img120">
-
-                <a href=""><dfn></dfn><img src="http://img2.paishoes.com/kshida/kaishida/201311/15/5983e5d584_thumb_120120.jpg"/>
-                </a>
-            </div>
-            <a href=""  class="title">【凯仕达】 男士运动T恤短袖吸湿排汗圆领休闲运动T恤</a>
-            <p>
-                <span class="pxui-color-red">￥29.00</span>
-                <del class="pxui-color-gray">￥139.00</del>
-                <span class="pxui-color-yellow"><span class="red">265</span>人</span>
-            </p>
-        </div>
-        <div class="tuan-list" style="margin-bottom: 0px">
-            <div class="img120">
-
-                <a href=""><dfn></dfn><img src="http://img6.paixie.net/originals/201403/10/G84555_491_p_thumb_120120.jpg"/>
-                </a>
-            </div>
-            <a href=""  class="title">【全国包邮】全网最低价！冠希同款仅139元即可抢购专柜正品阿迪达斯2014夏季新款男士...</a>
-            <p>
-                <span class="pxui-color-red">￥139.00</span>
-                <del class="pxui-color-gray">￥249.00</del>
-                <span class="pxui-color-yellow"><span class="red">213</span>人</span>
-            </p>
-        </div>
-
-        <div style="height:45px;background:white;text-align:right">
-            <input type="button" value="确认收货" style="height:30px;line-height:10px;"/>
-        </div>
-
-
-    </div>
-
-<div style="height:10px"></div>
-<div class="pxui-tab" style="padding:0 15px;margin-bottom: 2px;border:none;border-radius:0">
-    <div style="float:left" class="orderno"><span>▼</span> 订单号：1401011111111</div>
-    <div style="float:right">已确认</div>
-</div>
-<div class="js-goodlist">
-
-    <div class="tuan-list" style="margin-bottom: 0px">
-        <div class="img120">
-            <a href=""><dfn></dfn><img src="http://img2.paishoes.com/kshida/kaishida/201311/15/5983e5d584_thumb_120120.jpg"/>
-            </a>
-        </div>
-        <a href=""  class="title">【凯仕达】 男士运动T恤短袖吸湿排汗圆领休闲运动T恤</a>
-        <p>
-            <span class="pxui-color-red">￥29.00</span>
-            <del class="pxui-color-gray">￥139.00</del>
-            <span class="pxui-color-yellow"><span class="red">265</span>人</span>
-        </p>
-    </div>
-    <div class="tuan-list" style="margin-bottom: 0px">
-        <div class="img120">
-
-            <a href="545283.html"><dfn></dfn><img src="http://img6.paixie.net/originals/201403/10/G84555_491_p_thumb_120120.jpg"/>
-            </a>
-        </div>
-        <a href="545283.html"  class="title">【全国包邮】全网最低价！冠希同款仅139元即可抢购专柜正品阿迪达斯2014夏季新款男士...</a>
-        <p>
-            <span class="pxui-color-red">￥139.00</span>
-            <del class="pxui-color-gray">￥249.00</del>
-            <span class="pxui-color-yellow"><span class="red">213</span>人</span>
-        </p>
-    </div>
-
-    <div style="height:45px;background:white;text-align:right">
-        <input type="button" value="去评价" style="height:30px;line-height:10px;"/>
-        <input type="button" value="申请退款" style="height:30px;line-height:10px;"/>
-    </div>
+    <?php endforeach; ?>
 
 
 </div>

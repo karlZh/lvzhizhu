@@ -39,7 +39,30 @@ class Constants {
         'submit'    =>  100,
         'paysuc'    =>  101,
         'payerr'    =>  102,
+        'outing'    =>  200,
+        'received'  =>  202,
+        'evaluate'  =>  210,
+        'cancel'    =>  400,
+        'nocancel'  =>  401,
+        'canceling' =>  402,
+        'canceled'  =>  403,
+        'refunding' =>  404,
+        'refunded'  =>  405,
+    );
 
+    public static $step = array(
+        100    =>  '待付款',
+        101    =>  '等待发货',
+        102    =>  '待付款',
+        200    =>  '已发货',
+        202    =>  '已收货',
+        210    =>  '已评价',
+        400    =>  '申请退货',
+        401    =>  '拒绝退货',
+        402    =>  '退货中',
+        403    =>  '退货完成',
+        404    =>  '退款中',
+        405    =>  '已退款',
     );
 
 }

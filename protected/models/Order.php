@@ -8,6 +8,9 @@
 
 class Order extends CActiveRecord{
 
+    public $products = array();
+    public $step;
+
     public static function model($className=__CLASS__){
         return parent::model($className);
     }
