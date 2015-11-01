@@ -151,6 +151,7 @@
                     $orderDetail = OrderDetail::model()->findAll('orderid=:oid',array(":oid"=>$order->id));
                     $order->step = Constants::$step[$order->status];
                     $product = Product::model();
+                    $order->products = array();
                     foreach($orderDetail as $detail) {
                         $p = $product->find('id=:pid',array(':pid'=>$detail->productid));
                         $order->products[] = array(
