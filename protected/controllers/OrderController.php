@@ -144,33 +144,32 @@
         }
 
         public function actionList(){
-            if(isset($_SESSION['member']['id'])){
+            if(isset($_SESSION['member']['id'])) {
                 $memberid = $_SESSION['member']['id'];
-                $orders = Order::model()->findAll('place_order_uid=:mid',array(':mid'=>$memberid));
+                $orders = Order::model()->findAll('place_order_uid=:mid', array(':mid' => $memberid));
                 foreach($orders as $order){
-                    $orderDetail = OrderDetail::model()->findAll('orderid=:oid',array(":oid"=>$order->id));
-                    $order->step = Constants::$step[$order->status];
-                    $product = Product::model();
-                    $order->products = array();
-                    foreach($orderDetail as $detail) {
-                        $p = $product->find('id=:pid',array(':pid'=>$detail->productid));
+                    $orderDetail = OrderDetail::model();
+                    $details = $orderDetail->findAll('orderid=:oid',array(':oid'=>$order->id));
+                    foreach($details as $detail){
+                        $productModel = Product::model();
+                        $product = $productModel->findbypk($detail->productid);
                         $order->products[] = array(
-                            'productId'     =>  $detail->productid,
-                            'productName'   =>  $p->title,
-                            'productPic'    =>  $p->cover,
-                            'productPrice'  =>  $detail->price,
-                            'productNum'    =>  $detail->num,
+                            'productId' =>  $product->id,
+                            'productName'=> $product->title,
+                            'productPrice'=>$detail->price,
+                            'productNum'=>$detail->num,
+                            'productPic'=>$product->cover,
                         );
                     }
                 }
             }else{
-                $orders = array();
+                $this->redirect($this->createUrl('wechat/welogin'));
+                Yii::app()->end();
             }
             $data = array(
-                'orderlist' =>  $orders,
+                'orders'=>empty($orders)?array():$orders,
             );
             $this->render('orderlist',$data);
         }
-
 
     }

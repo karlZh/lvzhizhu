@@ -521,6 +521,50 @@
                             </ul>
                         </li>
 
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-tint"></i> 订单管理 <b class="fa fa-plus dropdown-plus"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 全部订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 未支付订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 已支付订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 未发货订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 已发货订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 已完成订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                        <i class="fa fa-caret-right"></i> 已取消订单
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
                         <!--<li>
                             <a href="buttons.html">
                                 <i class="fa fa-tint"></i> Buttons & Icons
