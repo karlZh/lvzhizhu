@@ -52,28 +52,31 @@
         }
 
         public function actionIndex(){
+            $_SESSION['member']['islogin'] = 1;
+            $_SESSION['member']['id'] = 1;
+            $_SESSION['topay'] = array(
+                1=>array(
+                    'num'=>1,
+                    'price'=>0.01,
 
+                )
+            );
             $cart = Yii::app()->request->getParam('cart');
             if(!empty($cart)){
                 $_SESSION['topay'] = $cart;
             }
 
-            if( empty($cart) ){
+            if( empty($_SESSION['topay']) ){
                 $this->redirect($this->createUrl('cart/index'));
+                Yii::app()->end();
             }
-
-            $_SESSION['member']['islogin'] = 1;
-            $_SESSION['member']['openid'] = 4;
-            $_SESSION['member']['openid'] = 'o2ibWwbbB7IwjUrXoE7W3Gx9tPak';
 
             if(!isset($_SESSION['member']['islogin'])||$_SESSION['member']['islogin']!=1 || empty($_SESSION['member']['id'])){
                 //执行微信登录
                 $this->redirect($this->createUrl('wechat/welogin'));
                 Yii::app()->end();
             }
-
             $receives = Receive::model()->findAll('memberid=:id',array(':id'=>$_SESSION['member']['id']));
-
             $data = array(
                 'receives'=>$receives,
             );

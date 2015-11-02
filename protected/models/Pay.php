@@ -59,8 +59,4 @@ class Pay{
         return $xml;
     }
 
-    public function notify(){
-
-    }
-
 }
