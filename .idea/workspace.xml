@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e423926-ba97-404d-966d-0f300a3f0791" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Constants.php" afterPath="$PROJECT_DIR$/protected/components/Constants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Order.php" afterPath="$PROJECT_DIR$/protected/models/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/OrderController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/OrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/OrderDetail.php" afterPath="$PROJECT_DIR$/protected/models/OrderDetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/layouts/layout.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/layouts/layout.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/order/orderlist.php" afterPath="$PROJECT_DIR$/protected/views/order/orderlist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/layouts/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39252338" vertical-offset="21864" max-vertical-offset="46520">
+            <state vertical-scroll-proportion="-6.857143" vertical-offset="21864" max-vertical-offset="46520">
               <caret line="560" column="37" selection-start-line="560" selection-start-column="37" selection-end-line="560" selection-end-column="37" />
               <folding>
                 <marker date="1446569593730" expanded="true" signature="28574:28648" placeholder="..." />
@@ -242,6 +234,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5120829" vertical-offset="1635" max-vertical-offset="4040">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Constants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Constants.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -249,19 +251,6 @@
               <caret line="48" column="18" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="18" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7530863" vertical-offset="6376" max-vertical-offset="8280">
-              <caret line="167" column="14" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -289,7 +278,6 @@
         <option value="$PROJECT_DIR$/protected/models/Pay.php" />
         <option value="$PROJECT_DIR$/protected/controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/protected/views/order/orderlist.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/components/Constants.php" />
         <option value="$PROJECT_DIR$/protected/models/Order.php" />
         <option value="$PROJECT_DIR$/protected/models/OrderDetail.php" />
@@ -298,6 +286,7 @@
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/order/orderlist.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/layouts/layout.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
       </list>
     </option>
   </component>
@@ -729,7 +718,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -994,14 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.081633" vertical-offset="1635" max-vertical-offset="4000">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.0408163" vertical-offset="6264" max-vertical-offset="7120">
@@ -1117,7 +1098,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/layouts/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39252338" vertical-offset="21864" max-vertical-offset="46520">
+        <state vertical-scroll-proportion="-6.857143" vertical-offset="21864" max-vertical-offset="46520">
           <caret line="560" column="37" selection-start-line="560" selection-start-column="37" selection-end-line="560" selection-end-column="37" />
           <folding>
             <marker date="1446569593730" expanded="true" signature="28574:28648" placeholder="..." />
@@ -1240,6 +1221,14 @@
             <marker date="1446569593730" expanded="true" signature="59618:60111" placeholder="..." />
             <marker date="1446569593730" expanded="true" signature="59850:60068" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5120829" vertical-offset="1635" max-vertical-offset="4040">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
