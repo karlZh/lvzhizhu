@@ -544,3 +544,97 @@ Stack trace:
 REQUEST_URI=/shop/ued.paixie.net/images/public/shoeloading/120120.gif
 HTTP_REFERER=http://localhost/shop/assets/home/css/com/com.css
 ---
+2015/11/03 23:05:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ued.paixie.net/images/public/shoeloading/160160.gif".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('ued.paixie.net/...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/ued.paixie.net/images/public/shoeloading/160160.gif
+HTTP_REFERER=http://localhost/shop/assets/home/css/com/com.css
+---
+2015/11/03 23:05:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/favicon.ico
+HTTP_REFERER=http://localhost/shop/index.php?r=receive/index
+---
+2015/11/03 23:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ued.paixie.net/images/public/shoeloading/320320.gif".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('ued.paixie.net/...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/ued.paixie.net/images/public/shoeloading/320320.gif
+HTTP_REFERER=http://localhost/shop/assets/home/css/com/com.css
+---
+2015/11/03 23:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ued.paixie.net/images/public/shoeloading/120120.gif".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('ued.paixie.net/...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/ued.paixie.net/images/public/shoeloading/120120.gif
+HTTP_REFERER=http://localhost/shop/assets/home/css/com/com.css
+---
+2015/11/03 23:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ued.paixie.net/images/public/shoeloading/160160.gif".' in F:\wamp\www\shop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('ued.paixie.net/...')
+#1 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\wamp\www\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/ued.paixie.net/images/public/shoeloading/160160.gif
+HTTP_REFERER=http://localhost/shop/assets/home/css/com/com.css
+---
+2015/11/04 00:13:17 [error] [exception.CException] exception 'CException' with message 'Property "Order.receive" is not defined.' in F:\wamp\www\shop\framework\base\CComponent.php:173
+Stack trace:
+#0 F:\wamp\www\shop\framework\db\ar\CActiveRecord.php(161): CComponent->__set('receive', '5 123123 123123...')
+#1 F:\wamp\www\shop\protected\modules\admin\controllers\OrderController.php(29): CActiveRecord->__set('receive', '5 123123 123123...')
+#2 F:\wamp\www\shop\framework\web\actions\CInlineAction.php(49): OrderController->actionIndex()
+#3 F:\wamp\www\shop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp\www\shop\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp\www\shop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('index')
+#7 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/order/ind...')
+#8 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\wamp\www\shop\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shop/index.php?r=admin/order/index
+HTTP_REFERER=http://localhost/shop/index.php?r=admin/category/add
+---
+2015/11/04 00:16:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "detail".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('detail')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('detail')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/order/det...')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=admin/order/detail&id=1
+HTTP_REFERER=http://localhost/shop/index.php?r=admin/order/index
+---
+2015/11/04 00:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "send".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('send')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('send')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/order/sen...')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=admin/order/send&id=1
+HTTP_REFERER=http://localhost/shop/index.php?r=admin/order/index
+---
+2015/11/04 00:31:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "send".' in F:\wamp\www\shop\framework\web\CController.php:483
+Stack trace:
+#0 F:\wamp\www\shop\framework\web\CController.php(270): CController->missingAction('send')
+#1 F:\wamp\www\shop\framework\web\CWebApplication.php(282): CController->run('send')
+#2 F:\wamp\www\shop\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/order/sen...')
+#3 F:\wamp\www\shop\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\wamp\www\shop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shop/index.php?r=admin/order/send&id=1
+HTTP_REFERER=http://localhost/shop/index.php?r=admin/order/index
+---

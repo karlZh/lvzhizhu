@@ -531,34 +531,32 @@
                                         <i class="fa fa-caret-right"></i> 全部订单
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="<?php echo $this->createUrl('order/index') ?>">
-                                        <i class="fa fa-caret-right"></i> 未支付订单
+                                    <a href="<?php echo $this->createUrl('order/index',array('status'=>'paysuc')) ?>">
+                                        <i class="fa fa-caret-right"></i> 准备发货订单
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="<?php echo $this->createUrl('order/index') ?>">
-                                        <i class="fa fa-caret-right"></i> 已支付订单
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo $this->createUrl('order/index') ?>">
-                                        <i class="fa fa-caret-right"></i> 未发货订单
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                    <a href="<?php echo $this->createUrl('order/index',array('status'=>'outing')) ?>">
                                         <i class="fa fa-caret-right"></i> 已发货订单
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $this->createUrl('order/index') ?>">
+                                    <a href="<?php echo $this->createUrl('order/index',array('status'=>'received')) ?>">
                                         <i class="fa fa-caret-right"></i> 已完成订单
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $this->createUrl('order/index') ?>">
-                                        <i class="fa fa-caret-right"></i> 已取消订单
+                                    <a href="<?php echo $this->createUrl('order/index',array('status'=>'cancel')) ?>">
+                                        <i class="fa fa-caret-right"></i> 处理退货订单
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="<?php echo $this->createUrl('order/index',array('status'=>'canceled')) ?>">
+                                        <i class="fa fa-caret-right"></i> 处理退款
                                     </a>
                                 </li>
 

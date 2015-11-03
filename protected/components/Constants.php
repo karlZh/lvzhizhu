@@ -65,4 +65,8 @@ class Constants {
         405    =>  '已退款',
     );
 
+    public static $express = array(
+        1    =>  '顺丰快递',
+    );
+
 }

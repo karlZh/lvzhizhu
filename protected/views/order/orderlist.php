@@ -31,8 +31,15 @@
         <?php endforeach; ?>
 
         <div style="height:45px;background:white;text-align:right">
-            <input type="button" value="去支付" style="height:30px;line-height:10px;"/>
-            <input type="button" value="取消订单" style="height:30px;line-height:10px;"/>
+            <?php if($order->status == 100 || $order->status == 102): ?>
+                <input type="button" value="去支付" data-value="<?php echo $order->id ?>" class="topay" style="height:30px;line-height:10px;"/>
+            <?php endif; ?>
+            <?php if($order->status >= 100 && $order->status < 200): ?>
+                <input type="button" value="取消订单" data-value="<?php echo $order->id ?>" class="cancel" style="height:30px;line-height:10px;"/>
+            <?php endif; ?>
+            <?php if($order->status == 200): ?>
+                <input type="button" value="确认收货" data-value="<?php echo $order->id ?>" class="receive" style="height:30px;line-height:10px;"/>
+            <?php endif; ?>
         </div>
 
     </div>
@@ -47,22 +54,9 @@
     <span><i class="arrow-left"></i>&nbsp;&nbsp;上一页</span>
     <a><i class="arrow-left"></i>&nbsp;&nbsp;上一页</a>
     <div class="pxui-select">
-        <span>1/14</span><del class="arrow-bottom"></del>
+        <span>1/1</span><del class="arrow-bottom"></del>
         <select>
-            <option value="1">1/14</option>
-            <option value="2">2/14</option>
-            <option value="3">3/14</option>
-            <option value="4">4/14</option>
-            <option value="5">5/14</option>
-            <option value="6">6/14</option>
-            <option value="7">7/14</option>
-            <option value="8">8/14</option>
-            <option value="9">9/14</option>
-            <option value="10">10/14</option>
-            <option value="11">11/14</option>
-            <option value="12">12/14</option>
-            <option value="13">13/14</option>
-            <option value="14">14/14</option>
+            <option value="1">1/1</option>
         </select>
     </div>
     <a>下一页&nbsp;&nbsp;<i class="arrow-right"></i></a>
@@ -77,5 +71,10 @@
         $(this).find(".orderno").find("span").html("▼");
         $(this).next(".js-goodlist").slideDown();
     })
+
+    $(".topay").click(function(){alert('开发中，请重新下单');});
+    $(".cancel").click(function(){alert('开发中，敬请期待');});
+    $(".receive").click(function(){alert('您确认收到货物了吗？');});
+
 </script>
 <!--content-end-->
